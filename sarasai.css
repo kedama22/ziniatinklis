@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#wrapper {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid;
+    background: teal;
+}
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding: 20px;
+    background: green;
+    color: white;
+}
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    background: green;
+    color: white;
+    clear: both;
+}
+div.list {
+    width: 22%;
+    height: 400px;
+    margin-left: 1%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: white;
+    float: left;
+}
+div#img {
+    background: url(images/sarasai_bg.jpg) center/cover no-repeat;
+}
+ul.stilius {
+    list-style-type: circle;
+}
+dt {
+    font-weight: 900;
+}
+dd {
+    margin-bottom: 10px;
+}
