@@ -1,0 +1,54 @@
+body {
+    background: #FEF3E2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@font-face {
+    font-family: 'genshin_didelis';
+    src: url(images_fonts/Genshin_Impact_DRIP_FONT.ttf);
+}
+@font-face {
+    font-family: 'genshin_paprastas';
+    src: url(images_fonts/genshin_impact_paprastas.ttf);
+}
+#logotipas {
+    height: 53px;
+    vertical-align: -25%;
+}
+#pavadinimas {
+    display: inline;
+    padding: 30px 0 0 10px; /* neveikia virsus */
+}
+#uzsakymas {
+    background: #FAB12F;
+
+}
+h1 {
+    font-family: genshin_didelis;
+    font-size: x-large;
+    /* padding: 15px; */
+    display: inherit; /*INHERIT REIKALAVIMAS*/
+    margin-left: -20px;
+}
+ul {
+    list-style-type: none;
+}
+/* header {
+    background: #FAB12F;
+} */
+.pasleptas_txt {
+    /* ????? */
+}
+.mora {
+    vertical-align: -5px;
+    height: 1.3em;
+    margin-left: -4px;
+}
+.vietu_img {
+    height: 100px;
+}
+div #vietos {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 100px;
+    margin-right: 100px;
+}

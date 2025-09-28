@@ -9,8 +9,125 @@
         <meta name="author" content="Saulė Gradeckaitė PI25">
     </head>
     <body>
+        <div id="uzsakymas">
         <header>
-            <h1>Teyvat travels</h1>
+            <div id="pavadinimas">
+            <img src="images_fonts/svetaines_logo.png" alt="T" id="logotipas">
+            <h1>eyvat travels</h1> <!-- logotipas pries teksta -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Pagrindinis</a></li>
+                    <li><a href="ka_pamatyti.html">Ką pamatyti</a></li>
+                    <li><a href="apie_mus.html">Apie mus</a></li>
+                    <li><a href="paslaugos.html">Paslaugos</a></li>
+                </ul>
+            </nav>
         </header>
+            <div> <!-- PLANAVIMAS (INPUT) -->
+                <section>
+                    <h2>Keliaukite su mumis!</h2>
+                </section>
+                <div id="planavimas">
+                    <form>
+                        <label for="Išvykimas" class="pasleptas_txt">Išvykimas</label>
+                        <input type="text" id="isvyk" placeholder="Išvykimas">
+                        <label for="Atvykimas" class="visually-hidden">Atvykimas</label>
+                        <input type="text" id="atvyk" placeholder="Atvykimas">
+                        <label for="Išvykimo-data" class="pasleptas_txt">Išvykimo data</label>
+                        <input type="date">
+                        <!-- <label for="submit">Submit</label>
+                        <input type="month"> -->
+                        <label for="Ieskoti" class="pasleptas_txt">Ieškoti</label>
+                        <input type="submit" value="Ieškoti">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div> <!-- LANKYTINOS VIETOS -->
+            <section>
+                <h3>Populiariausios kelionių vietos</h3>
+                    <div id="vietos">
+                        <figure>
+                            <img src="images_fonts/narukami.jpg" alt="Narukami salos" class="vietu_img">
+                            <figcaption>Narukami salos, Inazuma</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images_fonts/narukami.jpg" class="vietu_img">
+                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images_fonts/narukami.jpg" class="vietu_img">
+                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images_fonts/narukami.jpg" class="vietu_img">
+                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                        </figure>
+                    </div>
+            </section>
+        </div>
+        <div>
+            <section id="D-U-K"> <!-- D.U.K -->
+                <h3>D.U.K.</h3>
+                <details>
+                    <summary>Klausimas1</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </details>
+                <details>
+                    <summary>Klausimas2</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </details>
+                <details>
+                    <summary>Klausimas3</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </details>
+                <details>
+                    <summary>Klausimas4</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </details>
+                <details>
+                    <summary>Klausimas5</summary> 
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </details>
+                <details>
+                    <summary>Klausimas6</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur.<br>
+                    23490
+                    <img src="images_fonts/mora_finalas.png" class="mora"></p> <!-- BANDYMAS -->
+                </details>
+            </section>
+        </div>
+        <footer> <!-- FOOTERIS -->
+            <section>
+                <div>
+                    <h4>Kelionės planavimas</h4>
+                        <ul>
+                            <li><a href="index.html#planavimas">Planavimas</a></li>
+                            <li><a href="ka_pamatyti.html">Lankytinos vietos</a></li>
+                            <li><a href="paslaugos.html">Papildomos paslaugos</a></li>
+                        </ul>
+                </div>
+                <div>
+                    <h4>Paslaugos</h4>
+                        <ul>
+                            <li><a href="paslaugos.html#auto-nuoma">Pavežėjimas</a></li> <!-- PATAISYTI, JEIGU KAŽKĄ KEISIU -->
+                            <li><a href="paslaugos.html#apsistojimas">Apsistojimas</a></li>
+                            <li><a href="paslaugos.html#viskas-iskaiciuota">"Viskas įskaičiuota" kelionės</a></li>
+                        </ul>
+                </div>
+                <div>
+                    <h4>Apie mus</h4>
+                        <ul>
+                            <li><a href="apie_mus.html">Apie mus</a></li>
+                            <li><a href="index.html#D-U-K">D.U.K.</a></li>
+                            <li><a href="apie_mus.html#projektai">Mūsų projektai</a></li>
+                            <li><a href="apie_mus.html#karjera">Karjera</a></li>
+                        </ul>
+                </div>
+            </section>
+            <hr>
+            <h4>Sekite mus:</h4>
+        </footer>
     </body>
 </html>
