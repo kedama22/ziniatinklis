@@ -1,6 +1,16 @@
-body {
-    background: #FEF3E2;
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #03225D; /* PAKEISTI SPALVA */
+}
+body {
+    background-color: #f4f7f6;
+    line-height: 1.6;
 }
 @font-face {
     font-family: 'genshin_didelis';
@@ -10,45 +20,280 @@ body {
     font-family: 'genshin_paprastas';
     src: url(images_fonts/genshin_impact_paprastas.ttf);
 }
+a {
+    text-decoration: none;
+    color: #03225D;
+    transition: color 0.3s;
+}
+a:hover {
+    color: aquamarine; /* PAKEISTI SPALVA */
+}
+nav a {
+    font-weight: bold;
+    color: #03225D;
+    padding: 5px 0;
+}
+nav a:hover { 
+    color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
+    border-bottom: 2px solid rgb(22, 129, 93); /* PAKEISTI SPALVA */
+}
+.pasleptas_txt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px #03225D;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 #logotipas {
     height: 53px;
     vertical-align: -25%;
+    width: auto;
 }
 #pavadinimas {
-    display: inline;
-    padding: 30px 0 0 10px; /* neveikia virsus */
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 #uzsakymas {
-    background: #FAB12F;
-
+    background: url('images_fonts/start_up.jpg') no-repeat center center/cover;
+    padding: 50px 0;
+    text-align: center;
+    /* Minimalus aukštis, kad hero sekcija atrodytų gerai */
+    min-height: 40vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-h1 {
+#uzsakymas h2 {
+    font-size: 2.5em;
+    color: white;
+    text-shadow: 2px 2px 4px #03225D;
+    margin-bottom: 50px;
+}
+#planavimas {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Pusiau permatomas fonas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #03225D;
+}
+#planavimas form {
+    display: flex;
+    flex-wrap: wrap; /* Leisti elementams persikelti į naują eilutę, jei netelpa */
+    justify-content: center;
+    gap: 15px;
+}
+#planavimas input[type="text"],
+#planavimas input[type="date"] {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
+    min-width: 150px;
+    max-width: 250px;
+}
+#planavimas input[type="submit"] {
+    background-color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+#planavimas input[type="submit"]:hover {
+    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+}
+header h1 {
     font-family: genshin_didelis;
-    font-size: x-large;
+    font-size: 2em;
     /* padding: 15px; */
     display: inherit; /*INHERIT REIKALAVIMAS*/
     margin-left: -20px;
 }
-ul {
-    list-style-type: none;
+h3 {
+    text-align: center;
+    font-size: 2em;
+    margin: 40px 0 20px;
+    color: #1e1e1e;
 }
-/* header {
-    background: #FAB12F;
-} */
-.pasleptas_txt {
-    /* ????? */
-}
-.mora {
-    vertical-align: -5px;
-    height: 1.3em;
-    margin-left: -4px;
-}
-.vietu_img {
-    height: 100px;
-}
-div #vietos {
+#vietos {
     display: flex;
     justify-content: space-evenly;
-    margin-left: 100px;
-    margin-right: 100px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 5%;
+}
+#vietos figure {
+    flex-basis: 250px; /* Pradinis dydis, kad būtų telpa bent 3-4 eilutėje */
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px #03225D;
+    transition: transform 0.3s;
+}
+#vietos figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #03225D;
+}
+.vietu_img {
+    height: 200px;
+    object-fit: cover;
+}
+figcaption {
+    padding: 15px 10px;
+    font-weight: bold;
+    background-color: white;
+}
+nav ul {
+    list-style-type: none;
+    display: flex; /*PAZIURETI, GAL TINKA INHERIT*/
+    gap: 25px;
+}
+.mora {
+    max-width: 50px;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+}
+section {
+    padding: 20px 5%;
+    margin-bottom: 20px;
+}
+section:nth-of-type(3) > div { /* Stilizuojame Atsiliepimo bloką || PASIDOMETI WTF */
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-left: 5px solid #e0b33b;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px #03225D;
+}
+section div.atsiliepimu_deze {
+    box-sizing: border-box;
+    display: inline;
+    /* justify-content: center; */
+}
+section div.atsiliepimai {
+    display: inline-block;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    margin: 10px 10px 10px 32px;
+    padding: 10px 5px 10px 5px;
+    max-width: 500px;
+}
+h5 {
+    text-align: center;
+    font-style: italic;
+    color: #03225D;
+}
+div.atsiliepimai p {
+    text-align: center;
+    padding: 15px 7px 15px 7px;
+}
+#D-U-K details {
+    max-width: 1100px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+#D-U-K details:hover {
+    background-color: #f9f9f9;
+}
+
+#D-U-K summary {
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    outline: none;
+    list-style: none; /* Paslėpti standartinę rodyklę */
+}
+#D-U-K summary::-webkit-details-marker {
+    display: none; /* Paslėpti Chrome/Safari rodyklę */
+}
+
+/* Pridedame savo rodyklę per pseudo-elementą */
+#D-U-K summary::before {
+    content: '+';
+    font-size: 1.2em;
+    margin-right: 10px;
+    color: var(--pagrindine-spalva);
+    transition: transform 0.3s;
+}
+
+#D-U-K details[open] summary::before {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+#D-U-K p {
+    padding: 0 15px 15px;
+}
+
+footer {
+    background-color: var(--footer-fona);
+    color: var(--footer-tekstas);
+    padding: 30px 5%;
+}
+
+footer a {
+    color: var(--footer-tekstas);
+}
+
+footer a:hover {
+    color: var(--akcento-spalva);
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    color: var(--akcento-spalva);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
 }
