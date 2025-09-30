@@ -14,14 +14,25 @@ body {
     height: 53px;
     vertical-align: -25%;
 }
-#pavadinimas {
-    display: inline;
-    padding: 30px 0 0 10px; /* neveikia virsus */
+header {
+    /* max-width: max-content; */
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 100%;
+    background-color: #fef23f;
 }
-#uzsakymas {
+nav {
+    display: inline;
+}
+#pavadinimas {
+    display: inline !important; 
+    padding: 30px 0 0 10px; /* neveikia virsus */
+    margin: 10px 30px 0 10px;
+}
+/* #uzsakymas {
     background: #FAB12F;
 
-}
+} */
 h1 {
     font-family: genshin_didelis;
     font-size: x-large;
@@ -31,6 +42,14 @@ h1 {
 }
 ul {
     list-style-type: none;
+    display: inherit;
+    flex-grow: 0;
+    justify-content: space-evenly;
+    /* margin: 0 100px 0 200px; */
+}
+li {
+    display: inherit;
+    padding: 0 30px 30px 30px;
 }
 /* header {
     background: #FAB12F;
