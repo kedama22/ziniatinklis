@@ -6,7 +6,7 @@ html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #03225D; /* PAKEISTI SPALVA */
+    color: #1e1e1e; /* PAKEISTI SPALVA */
 }
 body {
     background-color: #f4f7f6;
@@ -22,7 +22,6 @@ body {
 }
 a {
     text-decoration: none;
-    color: #03225D;
     transition: color 0.3s;
 }
 a:hover {
@@ -30,7 +29,6 @@ a:hover {
 }
 nav a {
     font-weight: bold;
-    color: #03225D;
     padding: 5px 0;
 }
 nav a:hover { 
@@ -52,7 +50,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 20px 5% 30px 5%;
     background-color: white;
     box-shadow: 0 2px 4px #03225D;
     position: sticky;
@@ -60,33 +58,36 @@ header {
     z-index: 100;
 }
 #logotipas {
-    height: 57px;
-    vertical-align: -25%;
+    height: 70px;
+    width: auto;
 }
 #pavadinimas {
     display: flex;
-    gap: 10px;
     align-items: center;
+}
+header h1 {
+    font-family: genshin_didelis;
+    font-size: 2em;
+    position: relative;
+    top: 20px;
+    margin-left: -23px;
 }
 #uzsakymas {
     background: url('images_fonts/start_up.jpg') no-repeat center center/cover;
-    padding: 50px 0;
     text-align: center;
-    /* Minimalus aukštis, kad hero sekcija atrodytų gerai */
-    min-height: 40vh; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #uzsakymas h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     color: white;
     text-shadow: 2px 2px 4px #03225D;
-    margin-bottom: 50px;
+    margin: 50px 50px 50px 50px;
 }
 #planavimas {
     width: 90%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 30px auto;
     background-color: rgba(255, 255, 255, 0.9); /* Pusiau permatomas fonas */
     padding: 20px;
@@ -99,9 +100,16 @@ header {
     justify-content: center;
     gap: 15px;
 }
-#planavimas input[type="text"],
 #planavimas input[type="date"] {
-    padding: 10px 15px;
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
+    min-width: 150px;
+    max-width: 250px;
+}
+#planavimas #isvyk, #atvyk {
+    padding: 20px 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
@@ -120,13 +128,6 @@ header {
 }
 #planavimas input[type="submit"]:hover {
     background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
-}
-header h1 {
-    font-family: genshin_didelis;
-    font-size: 2em;
-    /* padding: 15px; */
-    display: inherit; /*INHERIT REIKALAVIMAS*/
-    margin-left: -20px;
 }
 h3 {
     text-align: center;
@@ -155,8 +156,12 @@ h3 {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px #03225D;
 }
-.vietu_img {
+#index .vietu_img {
     height: 200px;
+    object-fit: cover;
+}
+#pamatyti .vietu_img {
+    height: 150px;
     object-fit: cover;
 }
 figcaption {
@@ -167,6 +172,7 @@ figcaption {
 nav ul {
     list-style-type: none;
     display: flex; /*PAZIURETI, GAL TINKA INHERIT*/
+    font-size: 1.1em;
     gap: 25px;
 }
 .mora {
@@ -212,6 +218,12 @@ div.atsiliepimai p {
     text-align: center;
     padding: 15px 7px 15px 7px;
 }
+div .atsiliepimu_img {
+    border-radius: 50%;
+    height: 90px;
+    display: flex;
+    margin: 10px auto 10px auto;
+}
 #D-U-K details {
     max-width: 1100px;
     margin: 10px auto;
@@ -228,9 +240,15 @@ div.atsiliepimai p {
 #D-U-K summary {
     font-weight: bold;
     padding: 15px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
     outline: none;
     list-style: none; /* Paslėpti standartinę rodyklę */
+}
+.klausimas {
+    display: flex;
+    align-items: center;
 }
 #D-U-K summary::-webkit-details-marker {
     display: none; /* Paslėpti Chrome/Safari rodyklę */
@@ -238,34 +256,64 @@ div.atsiliepimai p {
 
 /* Pridedame savo rodyklę per pseudo-elementą */
 #D-U-K summary::before {
-    content: '+';
-    font-size: 1.2em;
-    margin-right: 10px;
-    color: var(--pagrindine-spalva);
-    transition: transform 0.3s;
+    content: "";
+    background-image: url('images_fonts/duk_icon.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    height: 24px;
+    transform: none !important;
+    transform-origin: none !important;
+    display: inline-block;
+    transform-origin: left center;
+    /* content: url(images_fonts/duk_icon.webp);
+    
+
+    display: inline-block; 
+    
+    transform: scale(0.3);
+    transform-origin: left center;
+    
+
+    margin-right: 10px; 
+    
+
+    height: 10px; 
+    width: 10px; */
 }
 
 #D-U-K details[open] summary::before {
-    content: '-';
-    transform: rotate(0deg);
+    content: "";
+    background-image: url('images_fonts/duk_icon_open.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    /* height: 100px; */
+    transform: none;
+    transform-origin: none;
+    display: inline-block;
+    transform-origin: left center;
 }
 
 #D-U-K p {
     padding: 0 15px 15px;
+    font-weight: 500;
 }
 
 footer {
     background-color: var(--footer-fona);
-    color: var(--footer-tekstas);
+    color: #1e1e1e;
     padding: 30px 5%;
 }
 
 footer a {
-    color: var(--footer-tekstas);
+    color: #1e1e1e;
 }
 
 footer a:hover {
-    color: var(--akcento-spalva);
+    color: #e0b33b;
 }
 
 footer section {
