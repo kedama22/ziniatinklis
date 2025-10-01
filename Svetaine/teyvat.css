@@ -60,9 +60,8 @@ header {
     z-index: 100;
 }
 #logotipas {
-    height: 53px;
+    height: 57px;
     vertical-align: -25%;
-    width: auto;
 }
 #pavadinimas {
     display: flex;
