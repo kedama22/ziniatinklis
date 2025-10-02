@@ -73,7 +73,7 @@ header h1 {
     margin-left: -23px;
 }
 #uzsakymas {
-    background: url('images_fonts/start_up.jpg') no-repeat center center/cover;
+    background: url('images_fonts/20251002172250.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -117,7 +117,7 @@ header h1 {
     max-width: 250px;
 }
 #planavimas input[type="submit"] {
-    background-color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
+    background-color: #d87055; /* PAKEISTI SPALVA */
     color: black;
     font-weight: bold;
     padding: 10px 20px;
@@ -143,14 +143,14 @@ h3 {
     padding: 20px 5%;
 }
 #vietos figure {
-    flex-basis: 250px; /* Pradinis dydis, kad būtų telpa bent 3-4 eilutėje */
+    flex-basis: 250px;
     flex-grow: 1;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 5px #03225D;
     transition: transform 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #vietos figure:hover {
     transform: translateY(-5px);
@@ -212,11 +212,13 @@ section div.atsiliepimai {
 h5 {
     text-align: center;
     font-style: italic;
+    font-size: 0.9em;
     color: #03225D;
 }
 div.atsiliepimai p {
     text-align: center;
     padding: 15px 7px 15px 7px;
+    font-weight: 400;
 }
 div .atsiliepimu_img {
     border-radius: 50%;
@@ -224,9 +226,15 @@ div .atsiliepimu_img {
     display: flex;
     margin: 10px auto 10px auto;
 }
+div .atsiliepimu_zvg {
+    height: 18px;
+    display: flex;
+    margin: 5px auto 5px auto;
+}
 #D-U-K details {
     max-width: 1100px;
     margin: 10px auto;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
@@ -301,9 +309,14 @@ div .atsiliepimu_img {
     padding: 0 15px 15px;
     font-weight: 500;
 }
+.duk-ul li {
+    list-style: disc;
+    margin-left: 50px;
+    font-weight: 500;
+}
 
 footer {
-    background-color: var(--footer-fona);
+    background-color: #a4d4f2;
     color: #1e1e1e;
     padding: 30px 5%;
 }

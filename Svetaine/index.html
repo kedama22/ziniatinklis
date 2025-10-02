@@ -32,11 +32,29 @@
                 <div id="planavimas">
                     <form>
                         <label for="Išvykimas" class="pasleptas_txt">Išvykimas</label>
-                        <input type="text" id="isvyk" placeholder="Išvykimas">
+                        <input type="text" id="isvyk" placeholder="Išvykimas" list="regionai" required>
+                            <datalist id="regionai">
+                                <option value="Mondstadt">Mondstadt</option>
+                                <option value="Liyue">Liyue</option>
+                                <option value="Inazuma">Inazuma</option>
+                                <option value="Sumeru">Sumeru</option>
+                                <option value="Fontaine">Fontaine</option>
+                                <option value="Natlan">Natlan</option>
+                                <option value="Nod-Krai">Nod-Krai</option>
+                            </datalist>
                         <label for="Atvykimas" class="pasleptas_txt">Atvykimas</label>
-                        <input type="text" id="atvyk" placeholder="Atvykimas">
+                        <input type="text" id="atvyk" placeholder="Atvykimas" list="regionai" required>
+                            <datalist id="regionai">
+                                <option value="Mondstadt">Mondstadt</option>
+                                <option value="Liyue">Liyue</option>
+                                <option value="Inazuma">Inazuma</option>
+                                <option value="Sumeru">Sumeru</option>
+                                <option value="Fontaine">Fontaine</option>
+                                <option value="Natlan">Natlan</option>
+                                <option value="Nod-Krai">Nod-Krai</option>
+                            </datalist>
                         <label for="Išvykimo-data" class="pasleptas_txt">Išvykimo data</label>
-                        <input type="date">
+                        <input type="date" required>
                         <label for="Ieskoti" class="pasleptas_txt">Ieškoti</label>
                         <input type="submit" value="Ieškoti">
                     </form>
@@ -48,44 +66,55 @@
                 <h3>Populiariausios kelionių vietos</h3>
                     <div id="vietos">
                         <figure>
+                            <a href="ka_pamatyti.html">
                             <img src="images_fonts/Inazuma/inazuma_city.webp" alt="Inazumos miestas" class="vietu_img">
                             <figcaption>Narukami salos, Inazuma</figcaption>
+                            </a>
                         </figure>
                         <figure>
-                            <img src="images_fonts/Liyue/liyue_harbor.webp" class="vietu_img">
-                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                            <a href="ka_pamatyti.html">
+                            <img src="images_fonts/Liyue/liyue_harbor.webp" alt="Didysis uostas" class="vietu_img">
+                            <figcaption>Didysis uostas, Liyue</figcaption>
+                            </a>
                         </figure>
                         <figure>
+                            <a href="ka_pamatyti.html">
                             <img src="images_fonts/Sumeru/mausoleum.webp" class="vietu_img">
-                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                            <figcaption>Karaliaus Dešreto mauzoliejus, Sumeru</figcaption>
+                            </a>
                         </figure>
                         <figure>
+                            <a href="ka_pamatyti.html">
                             <img src="images_fonts/Natlan/ochkanatlan.webp" class="vietu_img">
-                            <figcaption>Yashiori salos, Inazuma</figcaption>
+                            <figcaption>Očkanatlan salos, Natlan</figcaption>
+                            </a>
                         </figure>
                     </div>
             </section>
         </div>
         <div>
-            <section>
+            <section class="atsiliepimai1"> <!-- ATSILIEPIMAI -->
                 <h3>Atsiliepimai</h3>
                 <div id="atsiliepimu_deze">
                     <div class="atsiliepimai">
-                        <img src="images_fonts/kaveh.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
+                        <img src="images_fonts/Misc/kaveh.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
                         <h5>Jonas Kavėjūnas</h5>
+                        <img src="images_fonts/Misc/keturios_zvg.jpg" alt="Vertinimas: keturi iš penkių" class="atsiliepimu_zvg">
                         <p>Labai greitai nuskraidino... Nu vienu momentu norėjo pilotas numesti vidury
                             vandenyno, nes sakė, kad užknisau su savo kalbomis, bet šiaip labai rekomenduoju!</p>
                     </div>
                     <div class="atsiliepimai">
-                        <img src="images_fonts/diluc.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
-                        <h5>Dalius Ragvūnas</h5>                    
+                        <img src="images_fonts/Misc/diluc.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
+                        <h5>Dalius Ragvūnas</h5>    
+                        <img src="images_fonts/Misc/keturios_zvg.jpg" alt="Vertinimas: keturi iš penkių" class="atsiliepimu_zvg">                
                         <p>Buvau girdėjęs, kad šios kompanijos pilotas mėgsta grasinti žmonėms 
                             numetimu iš lėktuvo, tačiau aš asmeniškai nuskridau saugiai. Neužkniskit 
                             jo ir saugiai nuskrisit, rekomenduoju</p>
                     </div>
                     <div class="atsiliepimai">
-                        <img src="images_fonts/lyney.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
+                        <img src="images_fonts/Misc/lyney.png" alt="Apžvalgininko portretas" class="atsiliepimu_img">
                         <h5>Linas de Fontanas</h5>
+                        <img src="images_fonts/Misc/trys_zvg.jpg" alt="Vertinimas: trys iš penkių" class="atsiliepimu_zvg">
                         <p>Skrydžio sklandumas buvo tobulas, bet prie manęs sėdėjo du 
                             kambariokai, kurie prasipyko visas tris valandas dėl vienos 
                             neplautos lėkštės kriauklėj :( </p>
@@ -97,28 +126,52 @@
             <section id="D-U-K"> 
                 <h3>D.U.K.</h3>
                 <details>
-                    <summary class="klausimas">Klausimas1</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Ar galima grąžinti/keisti bilietą?</summary>
+                    <p>Paprastai negalima, tačiau yra išimtys. Susigrąžinti pinigus/keisti skrydžio laiką jei:<br>
+                        <ul class="duk-ul">
+                            <li>Skrydis vėluoja daugiau nei 198,3 val.</li>
+                            <li>Skrydis buvo atšauktas</li>
+                            <li>Mirėte prieš skrydį (mirus skrydžio metu grąžinimas negalioja)</li>
+                            <li>Dėl pernelyg ilgo prausimosi duše vėluojate į skrydį</li>
+                        </ul></p>
                 </details>
                 <details>
-                    <summary class="klausimas">Klausimas2</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Ar galima su savimi salone turėti gyvūną?</summary>
+                    <p>Galima. "Teyvat airlines" savo salonuose priima visus naminius gyvūnus,
+                        nuo žiurkėnų ar kačių iki lapių ir drakonų. Tačiau su savimi turite turėti
+                        nuotraukos įrodymą, kad gyvūnas yra naminis - t.y. gyvena Jūsų namuose.</p>
                 </details>
                 <details>
-                    <summary class="klausimas">Klausimas3</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Kokios bilietų lengvatos taikomos?</summary>
+                    <p>Taikomos lengvatos:
+                        <ul class="duk-ul">
+                            <li>6%, jei esate karys, dalyvavęs labai dideliame kare</li>
+                            <li>2,5%, jei esate karys, dalyvavęs nedideliame kare</li>
+                            <li>106% (mes sumokėsime Jums), jei esate bet kurio regiono dievybė</li>
+                            <li>50%, jei studijuojate Sumeru akademijoje</li>
+                            <li>35%, jei paprašysite labai gražiai</li>
+                        </ul>
+                    </p>
                 </details>
                 <details>
-                    <summary class="klausimas">Klausimas4</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Kas bus, jeigu į lėktuvą įlipsiu be bilieto?</summary>
+                    <p>Jums bus įduotas parašiutas ir būsite išprašyti iš lėktuvo.</p>
                 </details>
                 <details>
-                    <summary class="klausimas">Klausimas5</summary> 
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Kokius daiktus draudžiama gabenti lėktuvo salone?</summary> 
+                    <p>Griežtai draudžiama gabenti šiuos daiktus:
+                        <ul class="duk-ul">
+                            <li>Chemines ar toksiškas medžiagas, kenkiančias keleiviams</li>
+                            <li>Per daug kuprinių/krepšių</li>
+                            <li>Namelį medyje (paprasti nameliai nedraudžiami)</li>
+                            <li>Ginklus: kardus, lankus, ietis, patrankas, t.t.</li>
+                        </ul>
+                    </p>
                 </details>
                 <details>
-                    <summary class="klausimas">Klausimas6</summary>
-                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <summary class="klausimas">Kiek laiko prieš skrydį reikia atvykti į oro uostą?</summary>
+                    <p>Rekomenduojame atvykti bent pusei dienos anksčiau, kad be streso galėtumėte priregistruoti
+                        savo bagažą. Tačiau jei norite nervuotis prieš kelionę, galite atvykti tik 35 min. prieš skrydį.</p>
                 </details>
             </section>
         </div>
