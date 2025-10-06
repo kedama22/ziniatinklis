@@ -73,7 +73,7 @@ header h1 {
     margin-left: -23px;
 }
 #uzsakymas {
-    background: url('images_fonts/20251002172250.png') no-repeat center center/cover;
+    background: url('images_fonts/bandom.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -319,6 +319,7 @@ footer {
     background-color: #a4d4f2;
     color: #1e1e1e;
     padding: 30px 5%;
+    position: relative;
 }
 
 footer a {
@@ -331,7 +332,7 @@ footer a:hover {
 
 footer section {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; 
     flex-wrap: wrap;
     gap: 30px;
     padding: 0;
@@ -356,4 +357,14 @@ footer hr {
     border: 0;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin: 20px 0;
+}
+#paimon {
+    display: flex;
+    align-items: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 300px;
+    width: auto;
+    z-index: 1000;
 }
