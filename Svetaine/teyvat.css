@@ -50,7 +50,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 5% 30px 5%;
+    padding: 10px 5% 20px 5%;
     background-color: white;
     box-shadow: 0 2px 4px #03225D;
     position: sticky;
@@ -83,16 +83,15 @@ header h1 {
     font-size: 3em;
     color: white;
     text-shadow: 2px 2px 4px #03225D;
-    margin: 50px 50px 50px 50px;
+    margin: 50px 50px 30px 50px;
 }
 #planavimas {
-    width: 90%;
-    max-width: 1000px;
-    margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Pusiau permatomas fonas */
+    width: 1000px;
+    margin: 30px auto 50px;
+    background-color: rgba(255, 255, 255, 0.87); /* Pusiau permatomas fonas */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px #03225D;
+    box-shadow: 0 4px 10px #1e1e1e;
 }
 #planavimas form {
     display: flex;
@@ -114,7 +113,7 @@ header h1 {
     border-radius: 8px;
     flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
     min-width: 150px;
-    max-width: 250px;
+    max-width: 300px;
 }
 #planavimas input[type="submit"] {
     background-color: #d87055; /* PAKEISTI SPALVA */
@@ -160,7 +159,7 @@ h3 {
     height: 200px;
     object-fit: cover;
 }
-#pamatyti .vietu_img {
+#pamatyti .vietu_img { /*ka_pamatyti.html img*/
     height: 150px;
     object-fit: cover;
 }
@@ -333,7 +332,7 @@ footer a:hover {
 footer section {
     display: flex;
     justify-content: space-around; 
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 30px;
     padding: 0;
     margin-bottom: 20px;
@@ -352,12 +351,6 @@ footer ul {
 footer li {
     margin-bottom: 8px;
 }
-
-footer hr {
-    border: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 20px 0;
-}
 #paimon {
     display: flex;
     align-items: right;
@@ -367,4 +360,40 @@ footer hr {
     height: 300px;
     width: auto;
     z-index: 1000;
+}
+#loading_screen {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    height: 33px;
+    width: auto;
+    margin: 10px auto;
+}
+#loading_screen img {
+    /* display: block; */
+}
+#loading_screen::before {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: #8bc3e5;
+    margin: 0 30px;
+}
+#loading_screen::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background-color: #8bc3e5;
+    margin: 0 30px;
+}
+div#social_media {
+    display: flex;
+    justify-content: left;
+    /* align-items: start; */
+    margin-top: 10px;
+}
+img.social_media {
+    height: 30px;
+    width: auto;
+    margin: 0 10px;
 }
