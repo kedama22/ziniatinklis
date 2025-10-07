@@ -242,7 +242,6 @@ div .atsiliepimu_zvg {
     background-color: white;
     transition: background-color 0.3s;
 }
-
 #D-U-K details:hover {
     background-color: #f9f9f9;
 }
@@ -399,4 +398,13 @@ img.social_media {
     height: 30px;
     width: auto;
     margin: 0 10px;
+}
+#vietu_aprasymai details {
+    max-width: 1800px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: background-color 0.3s;
 }
