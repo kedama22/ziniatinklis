@@ -485,3 +485,22 @@ img.social_media {
     width: auto;
     object-fit: cover;
 }
+nav#region_showcase_nav {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 100;
+    left: 30px;
+}
+#region_showcase_nav li {
+    padding: 0;
+    margin: 0;
+}
+li a img.region_showcase_href {
+    height: 30px;
+    width: auto;
+    display: block;
+}
