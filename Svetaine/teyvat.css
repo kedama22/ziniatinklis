@@ -24,19 +24,13 @@ a {
     text-decoration: none;
     transition: color 0.3s;
 }
-a:hover {
-    color: aquamarine; /* PAKEISTI SPALVA */
-}
 nav a {
     font-weight: bold;
     /* padding: 5px 0; */
 }
-nav a:hover { 
+nav.main_menu a:hover { 
     color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
     border-bottom: 2px solid rgb(22, 129, 93); /* PAKEISTI SPALVA */
-}
-nav {
-
 }
 .pasleptas_txt {
     position: absolute;
@@ -82,7 +76,7 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
 }
-#uzsakymas h2 {
+h2 {
     font-size: 3em;
     color: white;
     text-shadow: 2px 2px 4px #1e1e1e;
@@ -297,20 +291,6 @@ div .atsiliepimu_zvg {
     transform-origin: none !important;
     display: inline-block;
     transform-origin: left center;
-    /* content: url(images_fonts/duk_icon.webp);
-    
-
-    display: inline-block; 
-    
-    transform: scale(0.3);
-    transform-origin: left center;
-    
-
-    margin-right: 10px; 
-    
-
-    height: 10px; 
-    width: 10px; */
 }
 
 #D-U-K details[open] summary::before {
@@ -392,9 +372,6 @@ footer li {
     width: auto;
     margin: 10px auto;
 }
-#loading_screen img {
-    /* display: block; */
-}
 #loading_screen::before {
     content: '';
     flex: 1;
@@ -420,21 +397,9 @@ img.social_media {
     width: auto;
     margin: 0 10px;
 }
-#vietu_aprasymai summary {
-    text-align: center;
-    font-weight: bold;
-    padding: 15px;
-    font-size: 1.6em;
-    /* display: flex;
-    align-items: center; */
-    cursor: pointer;
-    outline: none;
-    list-style: none;
+#vietu_aprasymai h3 {
+    font-family: genshin_paprastas;
 }
-#vietu_aprasymai summary::-webkit-details-marker {
-    display: none; /* Paslėpti Chrome/Safari rodyklę */
-}
-
 #vietu_aprasymai details {
     max-width: 1400px;
     margin: 10px auto;
@@ -443,10 +408,6 @@ img.social_media {
     border-radius: 8px;
     background-color: white;
     transition: background-color 0.3s;
-}
-#vietu_aprasymai h2 {
-    text-align: center;
-    margin-bottom: 20px;
 }
 #vietu_aprasymai p {
     /* padding: 0 15px 15px; */
@@ -469,12 +430,6 @@ img.social_media {
     justify-content: space-between;
     height: 378px;
 }
-#ka_pamatyti_virsus h2 {
-    font-size: 3em;
-    color: white;
-    text-shadow: 2px 2px 4px #1e1e1e;
-    margin: 50px 50px 30px 50px;
-}
 .region_showcase {
     display: flex;
     margin: 50px 40px;
@@ -489,26 +444,145 @@ div#region_showcase_nav {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     position: fixed;
     z-index: 100;
     left: 30px;
+    top: 54%;
+    transform: translateY(-50%); /* counteractina "top:50%" ir pakelia diva per puse jo paties aukscio */
+}
+div#region_showcase_nav ul {
+    display: flex;
+    flex-direction: column;
 }
 #region_showcase_nav li {
     padding: 0;
     margin: 0;
 }
+.region_showcase_a {
+    position: relative;
+    display: block;
+    padding: 5px;
+}
+.region_showcase_a::after {
+    content: attr(data-regiono-pav);
+    font-family: genshin_paprastas;
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap; /* Keep the name on a single line */
+    padding: 4px 8px;
+    margin-left: 10px; /* Space between icon and text */
+    /* background-color: rgba(0, 0, 0, 0.85); */
+    color: rgb(170, 77, 77);
+    /* text-decoration: underline; */
+    border-radius: 4px;
+    font-size: 18px;
+    z-index: 101; /* Make sure it's above other elements */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+.region_showcase_a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 li a img.region_showcase_href {
-    height: 30px;
+    height: 40px;
     width: auto;
     display: block;
+
 }
 div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai {
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
-    margin: 10px 10px;
-    /* padding: 10px 5px 10px 5px;
-    max-width: 500px; */
+    margin: 30px auto;
+    width: 1450px;
+}
+#apie_mus_virsus {
+    background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 378px;
+}
+#kompanija, #projektai {
+    margin: auto;
+    width: 1800px;
+}
+#kompanijos_info {
+    display: flex;
+    margin: 50px 40px;
+    justify-content: space-around;
+    gap: 60px;
+}
+#kompanija p {
+    display: inline-flex;
+    font-weight: 500;
+}
+#komanda {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 5%;
+}
+#komanda figure {
+    flex-basis: 250px;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#komanda_visa {
+    display: inline-flex;
+    height: 350px;
+    border-radius: 8px;
+}
+#kompanija h4 {
+    text-align: center;
+    font-size: 1.5em;
+}
+.komandos_nariai {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#projektai h4 {
+    font-size: 1.3em;
+    margin: 0 0 -20px 0;
+}
+#projektas_1 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    gap: 30px;
+    margin: 40px 0;
+    margin-right: auto;
+}
+#projektas_2 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    gap: 30px;
+    margin: 40px auto;
+}
+#projektas_3 {
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+    gap: 30px;
+    margin: 40px 0;
+    margin-left: auto;
+}
+.projektu_img {
+    border-radius: 8px;
+    width: 500px;
+    margin-top: -45px;
 }
