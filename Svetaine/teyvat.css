@@ -131,6 +131,30 @@ header h1 {
 #planavimas input[type="submit"]:hover {
     background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
 }
+#pyro_symbol {
+    z-index: -1;
+    opacity: 4%;
+    height: 600px;
+    width: 550px;
+    position: absolute;
+}
+#cryo_symbol {
+    right: 10px;
+    margin: -40px 0 0 0;
+    z-index: -1;
+    opacity: 4%;
+    height: 650px;
+    width: auto;
+    position: absolute;
+}
+#geo_symbol {
+    margin: 80px 0 0 10px;
+    z-index: -1;
+    opacity: 4%;
+    height: 600px;
+    width: auto;
+    position: absolute;
+}
 h3 {
     text-align: center;
     font-size: 2em;
@@ -162,10 +186,7 @@ h3 {
     height: 200px;
     object-fit: cover;
 }
-#pamatyti .vietu_img { /*ka_pamatyti.html img*/
-    height: 150px;
-    object-fit: cover;
-}
+
 figcaption {
     padding: 15px 10px;
     font-weight: bold;
@@ -399,12 +420,68 @@ img.social_media {
     width: auto;
     margin: 0 10px;
 }
+#vietu_aprasymai summary {
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 1.6em;
+    /* display: flex;
+    align-items: center; */
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+}
+#vietu_aprasymai summary::-webkit-details-marker {
+    display: none; /* Paslėpti Chrome/Safari rodyklę */
+}
+
 #vietu_aprasymai details {
-    max-width: 1800px;
+    max-width: 1400px;
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: white;
     transition: background-color 0.3s;
+}
+#vietu_aprasymai h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#vietu_aprasymai p {
+    /* padding: 0 15px 15px; */
+    font-weight: 500;
+    width: 600px;
+    margin-top: 40px;
+}
+#vietu_aprasymai figure {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#ka_pamatyti_virsus {
+    background: url('images_fonts/ka_pamatyti.png') no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 378px;
+}
+#ka_pamatyti_virsus h2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px #1e1e1e;
+    margin: 50px 50px 30px 50px;
+}
+.region_showcase {
+    display: flex;
+    margin: 50px 40px;
+    justify-content: space-around;
+}
+#pamatyti .vietu_img { /*ka_pamatyti.html img*/
+    height: 280px;
+    width: auto;
+    object-fit: cover;
 }
