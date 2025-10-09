@@ -611,6 +611,13 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin-left: 50px;
     font-weight: 500;
 }
+#auto-nuoma, #apsistojimas, #viskas-iskaiciuota {
+    margin: auto;
+    width: 1500px;
+}
+#paslaugos p {
+    font-weight: 500;
+}
 #paslaugos_virsus {
     background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
     text-align: center;
@@ -635,4 +642,60 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #paslaugos_uzsakymas ul li {
     font-size: large;
     font-weight: 500;
+}
+#auto-nuoma div {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 400px; /* PAKEISTI, JEI DESIU DAUGIAU CONTENTO */
+    /* display: flex;
+    justify-content: space-around; */
+    margin: 40px auto;
+}
+#auto-nuoma p {
+    width: 600px;
+    margin: 60px 40px;
+    text-align: left;
+}
+#pavezejimas_img {
+    position: absolute;
+    right: 200px;
+    top: 560px;
+    height: 570px;
+    width: auto;
+    z-index: 2;
+}
+#apsistojimas_beh3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 5%;
+}
+#apsistojimas_beh3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 5%;
+}
+#apsistojimas_beh3 summary {
+    cursor: pointer;
+    outline: none;
+    list-style: none; 
+}
+#apsistojimas_beh3 details {
+    flex-basis: 250px;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.apsistojimas_img {
+    height: 300px;
+    width: auto;
+    object-fit: cover;
 }
