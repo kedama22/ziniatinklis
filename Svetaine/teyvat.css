@@ -152,7 +152,7 @@ h2 {
 h3 {
     text-align: center;
     font-size: 2em;
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
     color: #1e1e1e;
 }
 #vietos {
@@ -199,15 +199,14 @@ nav ul {
     margin-top: 5px;
 }
 section {
-    padding: 20px 5%;
+    padding: 30px 5%;
     margin-bottom: 20px;
 }
-section:nth-of-type(3) > div { /* Stilizuojame Atsiliepimo bloką || PASIDOMETI WTF */
+.atsiliepimai1 section:nth-of-type(3) > div { /* Stilizuojame Atsiliepimo bloką || PASIDOMETI WTF */
     max-width: 700px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
-    border-left: 5px solid #e0b33b;
     border-radius: 8px;
     box-shadow: 0 1px 3px #1e1e1e;
 }
@@ -500,6 +499,9 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin: 30px auto;
     width: 1450px;
 }
+#apie_mus h3 {
+    margin-bottom: 50px;
+}
 #apie_mus_virsus {
     background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
     text-align: center;
@@ -508,13 +510,13 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     justify-content: space-between;
     height: 378px;
 }
-#kompanija, #projektai {
+#kompanija, #projektai, #karjera {
     margin: auto;
     width: 1800px;
 }
 #kompanijos_info {
     display: flex;
-    margin: 50px 40px;
+    margin: 0 40px 50px 40px;
     justify-content: space-around;
     gap: 60px;
 }
@@ -554,35 +556,83 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     display: block;
     margin: 0 auto;
 }
-#projektai h4 {
+#projektas_1_h4, #projektas_2_h4, #projektas_3_h4 {
     font-size: 1.3em;
-    margin: 0 0 -20px 0;
+    margin: 0 0 -70px 0;
 }
-#projektas_1 {
+#projektas_2_h4 {
+    text-align: center;
+    margin-right: 606px;
+}
+#projektas_3_h4 {
+    margin-left: 611px;
+}
+#projektas_1, #projektas_2, #projektas_3 {
     display: flex;
     justify-content: space-around;
     width: 1000px;
     gap: 30px;
-    margin: 40px 0;
+}
+#projektai > div:nth-of-type(1) { /* 1st direct child div of #projektai */
+    margin-top: 50px;
+}
+#projektas_1 {
+    margin: 80px 0;
     margin-right: auto;
 }
 #projektas_2 {
-    display: flex;
-    justify-content: space-around;
-    width: 1000px;
-    gap: 30px;
-    margin: 40px auto;
+    margin: 80px auto;
 }
 #projektas_3 {
-    display: flex;
-    justify-content: space-around;
-    width: 1000px;
-    gap: 30px;
-    margin: 40px 0;
+    margin: 80px 0 0;
     margin-left: auto;
 }
 .projektu_img {
     border-radius: 8px;
     width: 500px;
     margin-top: -45px;
+}
+#karjeros_img {
+    width: 550px;
+    height: auto;
+    border-radius: 8px;
+}
+#karjera div {
+    display: flex;
+    justify-content: space-around;
+    /* gap: 50px; */
+    /* margin-bottom: 50px; */
+}
+#karjera div div {
+    display: initial;
+}
+#karjera li {
+    list-style: disc;
+    margin-left: 50px;
+    font-weight: 500;
+}
+#paslaugos_virsus {
+    background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 378px;
+}
+#paslaugos_uzsakymas {
+    width: 600px;
+    margin: 30px auto 50px;
+    background-color: rgba(255, 255, 255, 0.65); /* Pusiau permatomas fonas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #1e1e1e;
+}
+#paslaugos_uzsakymas ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#paslaugos_uzsakymas ul li {
+    font-size: large;
+    font-weight: 500;
 }
