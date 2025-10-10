@@ -699,3 +699,30 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     width: auto;
     object-fit: cover;
 }
+#planavimas_karjera {
+    width: fit-content;
+    margin: 30px auto 50px;
+    background-color: rgba(59, 137, 61, 0.59); /* Pusiau permatomas fonas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #1e1e1e;
+}
+#planavimas_karjera form {
+    display: flex;
+    flex-wrap: wrap; /* Leisti elementams persikelti į naują eilutę, jei netelpa */
+    justify-content: center;
+    gap: 15px;
+}
+#planavimas_karjera input[type="submit"] {
+    background-color: #d87055; /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+#planavimas_karjera input[type="submit"]:hover {
+    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+}
