@@ -104,11 +104,11 @@ h2 {
     min-width: 150px;
     max-width: 250px;
 }
-#planavimas #isvyk, #atvyk {
+#isvyk, #atvyk {
     padding: 20px 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
+    flex-grow: 1;
     min-width: 150px;
     max-width: 300px;
 }
@@ -192,12 +192,7 @@ nav ul {
     font-size: 1.1em;
     gap: 25px;
 }
-.mora {
-    max-width: 50px;
-    height: auto;
-    display: block;
-    margin-top: 5px;
-}
+
 section {
     padding: 30px 5%;
     margin-bottom: 20px;
@@ -472,9 +467,7 @@ div#region_showcase_nav ul {
     white-space: nowrap; /* Keep the name on a single line */
     padding: 4px 8px;
     margin-left: 10px; /* Space between icon and text */
-    /* background-color: rgba(0, 0, 0, 0.85); */
     color: rgb(170, 77, 77);
-    /* text-decoration: underline; */
     border-radius: 4px;
     font-size: 18px;
     z-index: 101; /* Make sure it's above other elements */
@@ -611,6 +604,51 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin-left: 50px;
     font-weight: 500;
 }
+#planavimas_karjera {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    width: 400px;
+    margin: 15px 0 0 0;
+    padding: 25px;
+    border-radius: 8px;
+}
+#planavimas_karjera form {
+    /* display: inline-flex; */
+    gap: 15px;
+}
+#karjera_elpastas {
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1;
+    min-width: 150px;
+    max-width: 300px;
+}
+#planavimas_karjera input[type="submit"] {
+    background-color: #deaf39; /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+#planavimas_karjera input[type="submit"]:hover {
+    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+}
+#planavimas_karjera input[type="file"] {
+    background-color: white;
+    border: 1px solid #ccc;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
 #auto-nuoma, #apsistojimas, #viskas-iskaiciuota {
     margin: auto;
     width: 1500px;
@@ -699,30 +737,44 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     width: auto;
     object-fit: cover;
 }
-#planavimas_karjera {
-    width: fit-content;
-    margin: 30px auto 50px;
-    background-color: rgba(59, 137, 61, 0.59); /* Pusiau permatomas fonas */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px #1e1e1e;
+#viskas-iskaiciuota h4 {
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline #a4d4f2;
 }
-#planavimas_karjera form {
+#viskas-iskaiciuota div:nth-of-type(1), #viskas-iskaiciuota div:nth-of-type(2) {
+    margin: 30px 0;
+}
+#liyue-inazuma, #nod-krai-mondstadt {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.isk_kelioniu_img_blokas {
     display: flex;
-    flex-wrap: wrap; /* Leisti elementams persikelti į naują eilutę, jei netelpa */
-    justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 30px !important; /* IMPORTANT LETSGOOOO */
 }
-#planavimas_karjera input[type="submit"] {
-    background-color: #d87055; /* PAKEISTI SPALVA */
-    color: black;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+.liyue-inazuma-img, .nodkrai-mondstadt-img {
+    height: 150px;
+    width: auto;
     border-radius: 8px;
-    transition: background-color 0.3s;
 }
-#planavimas_karjera input[type="submit"]:hover {
-    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+.kelioniu_img_bloko_rodykle {
+    height: 55px;
+}
+.mora {
+    align-items: center;
+    max-width: 30px;
+    height: auto;
+    margin: 0 -4px -6px 0;
+}
+.isk_kelioniu_info {
+    display: flex;
+    gap: 40px;
+}
+.isk_kelioniu_info ul li {
+    margin-left: 30px;
 }
