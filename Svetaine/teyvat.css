@@ -320,6 +320,7 @@ footer {
 
 footer a {
     color: #1e1e1e;
+    font-weight: 500;
 }
 
 footer a:hover {
