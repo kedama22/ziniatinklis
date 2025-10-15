@@ -955,13 +955,16 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     justify-content: space-evenly;
 }
 #registracija1, #krepselis {
-    width: 700px; /* PASIZIURETI, KAIP TEN SU ASIDE */
+    width: 800px; /* PASIZIURETI, KAIP TEN SU ASIDE */
     margin: 30px auto 50px;
     background-color: rgba(255, 255, 255, 0.67); /* Pusiau permatomas fonas */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px #1e1e1e;
     z-index: 100;
+}
+#registracija h2 {
+    text-align: center;
 }
 #registracijos_deze form {
     display: flex;
@@ -997,4 +1000,12 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 }
 #registracijos_deze input[type="submit"]:hover {
     background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+}
+#kelione_krepselyje1, #kelione_krepselyje2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #1e1e1e;
 }
