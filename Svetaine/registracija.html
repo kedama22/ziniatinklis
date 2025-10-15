@@ -25,7 +25,7 @@
                 </ul>
             </nav>
         </header>
-        <img src="images_fonts/Liyue/chasm.webp" alt="" id="registracija_header"> <!-- PARASYTI ALT -->
+        <div id="registracija_header"></div> <!-- PARASYTI ALT -->
         </div>
         <div id="main_aside">
         <main>
@@ -41,10 +41,8 @@
                     <input type="text" id="pavarde" placeholder="Pavardė" required>
                     <label for="Imone" class="pasleptas_txt">Įmonė</label>
                     <input type="text" id="imone" placeholder="Įmonė">
-                    <label for="kelione_isvyk" class="pasleptas_txt">Išvykimo data</label>
-                    <input type="date" required>
-                    <label for="kelione_atvyk" class="pasleptas_txt">Atvykimo data</label>
-                    <input type="date" required>
+                    <label for="elpastas" class="pasleptas_txt">El. paštas</label>
+                    <input type="text" id="elpastas" placeholder="El. paštas" required>
                 </form>
             </div> 
             </div>
@@ -56,13 +54,27 @@
                 </section>
                 <div id="kelioniu_krepselis">
                     <!-- PAZIURETI, KAIP KITOS KOMPANIJOS WATAFAKY -->
-                     <section id="kelione_krepselyje1">
+                    <section id="kelione_krepselyje1">
 
-                     </section>
-                     <section id="kelione_krepselyje2">
+                    </section>
+                    <section id="kelione_krepselyje2">
 
-                     </section>
+                    </section>
                 </div>
+            </div>
+            <div id="mokejimas">
+                <section>
+                    <h2>Mokėjimas</h2>
+                    <div id="mokejimo_budai">
+                        <ul>
+                            <li><a href="#">Elektroninė bankininkystė</a></li>
+                            <li><a href="#">Banko pavedimas</a></li>
+                            <li><a href="#">Įveskite kortelės duomenis</a></li>
+                        </ul>
+                    </div>
+                    <label for="Ieskoti" class="pasleptas_txt">Ieškoti</label> <!-- PASIZIURETI, KAD VEIKTU A HREF -->
+                    <input type="submit" value="Ieškoti">
+                </section>
             </div>
         </aside>    
         </div>
