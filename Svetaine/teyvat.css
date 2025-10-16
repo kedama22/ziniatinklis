@@ -786,6 +786,20 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     display: block;
     margin: 0 auto;
 }
+#dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2 {
+    position: absolute;
+    z-index: -1;
+    opacity: 4%;
+    height: 400px;
+    width: auto;
+    top: 970px;
+}
+#dendro_symbol_apsistojimas1 {
+    left: 30px;
+}
+#dendro_symbol_apsistojimas2 {
+    right: 30px;
+}
 /* #viskas-iskaiciuota h4 {
     text-align: center;
     font-size: 1.5em;
