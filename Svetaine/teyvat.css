@@ -80,11 +80,11 @@ header h1 {
     font-size: 3em;
     color: white;
     text-shadow: 2px 2px 4px #1e1e1e;
-    margin: 50px 50px 30px 50px;
+    margin: 50px 50px 20px 50px;
 }
 #planavimas {
-    width: 1000px;
-    margin: 30px auto 50px;
+    width: 1300px;
+    margin: 0 auto 50px;
     background-color: rgba(255, 255, 255, 0.87); /* Pusiau permatomas fonas */
     padding: 20px;
     border-radius: 8px;
@@ -109,8 +109,14 @@ header h1 {
     border: 1px solid #ccc;
     border-radius: 8px;
     flex-grow: 1;
-    min-width: 150px;
-    max-width: 300px;
+    width: 150px;
+}
+#zmoniu_sk {
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100px;
+    flex-grow: 1;
 }
 #planavimas input[type="submit"] {
     background-color: #d87055; /* PAKEISTI SPALVA */
@@ -324,13 +330,12 @@ footer a {
 }
 
 footer a:hover {
-    color: #e0b33b;
+    color: #c89772;
 }
 
 footer section {
     display: flex;
     justify-content: space-around; 
-    /* flex-wrap: wrap; */
     gap: 30px;
     padding: 0;
     margin-bottom: 20px;
@@ -504,13 +509,53 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     justify-content: space-between;
     height: 230px;
 }
-#kompanija, #projektai, #karjera {
-    margin: auto;
-    width: 1800px;
+#dots1 {
+    opacity: 2%;
+    position: absolute;
+    height: 870px;
+    z-index: -1;
+    top: 1000px;
+    left: 30px;
+}
+#dots2 {
+    opacity: 2%;
+    position: absolute;
+    height: 870px;
+    z-index: -1;
+    top: 1800px;
+    right: 30px;
+}
+#weapon_bow, #weapon_polearm, #weapon_claymore {
+    opacity: 4%;
+    position: absolute;
+    height: 550px;
+    z-index: -1;
+}
+#weapon_bow {
+    top: 320px;
+    left: 10px;
+}
+#weapon_polearm {
+    top: 1030px;
+    right: 10px;
+}
+#weapon_claymore {
+    top: 2300px;
+    left: 10px;
+}
+#projektai, #kompanija, #karjera {
+    margin: 50px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255);
+    width: 1450px;
+}
+#karjera {
+    margin-bottom: 60px;
 }
 #kompanijos_info {
     display: flex;
-    margin: 0 40px 50px 40px;
+    margin: 0 30px 50px 30px;
     justify-content: space-around;
     gap: 60px;
 }
@@ -522,8 +567,8 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 5%;
+    gap: 30px;
+    padding: 30px 0;
 }
 #komanda figure {
     flex-basis: 250px;
@@ -537,7 +582,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 }
 #komanda_visa {
     display: inline-flex;
-    height: 350px;
+    height: 310px;
     border-radius: 8px;
 }
 #kompanija h4 {
@@ -552,39 +597,30 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 }
 #projektas_1_h4, #projektas_2_h4, #projektas_3_h4 {
     font-size: 1.3em;
-    margin: 0 0 -70px 0;
-}
-#projektas_2_h4 {
-    text-align: center;
-    margin-right: 606px;
-}
-#projektas_3_h4 {
-    margin-left: 611px;
 }
 #projektas_1, #projektas_2, #projektas_3 {
     display: flex;
     justify-content: space-around;
-    width: 1000px;
-    gap: 30px;
+    gap: 100px;
+    font-weight: 500;
 }
-#projektai > div:nth-of-type(1) { /* 1st direct child div of #projektai */
-    margin-top: 50px;
+#projektai:nth-of-type(1) { /* 1st direct child div of #projektai */
+    margin: 50px auto 20px;
 }
 #projektas_1 {
     margin: 80px 0;
-    margin-right: auto;
 }
 #projektas_2 {
     margin: 80px auto;
 }
 #projektas_3 {
-    margin: 80px 0 0;
-    margin-left: auto;
+    margin: 80px 0 50px;
 }
 .projektu_img {
     border-radius: 8px;
     width: 500px;
-    margin-top: -45px;
+    height: auto;
+    margin-top: -35px;
 }
 #karjeros_img {
     width: 550px;
@@ -594,8 +630,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #karjera div {
     display: flex;
     justify-content: space-around;
-    /* gap: 50px; */
-    /* margin-bottom: 50px; */
+    gap: 80px;
 }
 #karjera div div {
     display: initial;
@@ -609,25 +644,17 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     display: flex;
     justify-content: baseline;
     align-items: center;
-    width: 400px;
-    margin: 15px 0 0 0;
-    padding: 25px;
-    border-radius: 8px;
 }
 #planavimas_karjera form {
-    /* display: inline-flex; */
     gap: 15px;
 }
 #karjera_elpastas {
     padding: 15px 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    flex-grow: 1;
-    min-width: 150px;
-    max-width: 300px;
 }
 #planavimas_karjera input[type="submit"] {
-    background-color: #deaf39; /* PAKEISTI SPALVA */
+    background-color: #e8b73b; /* PAKEISTI SPALVA */
     color: black;
     font-weight: bold;
     padding: 10px 20px;
@@ -637,7 +664,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     transition: background-color 0.3s;
 }
 #planavimas_karjera input[type="submit"]:hover {
-    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+    background-color: #caa337; /* Tamsesnė akcento spalva užvedus pelyte */
 }
 #planavimas_karjera input[type="file"] {
     background-color: white;
@@ -650,7 +677,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     border-radius: 8px;
     transition: background-color 0.3s;
 }
-#auto-nuoma, #apsistojimas, #viskas-iskaiciuota {
+#auto-nuoma {
     margin: auto;
     width: 1500px;
 }
@@ -686,30 +713,43 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    height: 400px; /* PAKEISTI, JEI DESIU DAUGIAU CONTENTO */
+    height: 370px; /* PAKEISTI, JEI DESIU DAUGIAU CONTENTO */
     /* display: flex;
     justify-content: space-around; */
     margin: 40px auto;
 }
 #auto-nuoma p {
     width: 600px;
-    margin: 60px 40px;
+    margin: 60px 70px;
     text-align: left;
 }
 #pavezejimas_img {
     position: absolute;
     right: 200px;
-    top: 370px;
+    top: 360px;
     height: 570px;
     width: auto;
     z-index: 2;
 }
+#weapon_claymore_mavuika {
+    position: absolute;
+    z-index: 1;
+    opacity: 4%;
+    top: 470px;
+    height: 450px;
+    width: auto;
+    right: 320px;
+}
+#apsistojimas {
+    width: 1600px;
+    margin: auto;
+}
 #apsistojimas_beh3 {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 5%;
+    /* flex-wrap: wrap; */
+    gap: 50px;
+    padding: 20px 0;
     margin-bottom: 50px;
 }
 #apsistojimas_beh3 summary {
@@ -718,7 +758,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     list-style: none; 
 }
 #apsistojimas_beh3 details {
-    flex-basis: 250px;
+    flex-basis: 300px;
     flex-grow: 1;
     text-align: center;
     border: 1px solid #ddd;
@@ -727,10 +767,24 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     transition: transform 0.3s;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+.apsistojimas_namai {
+    text-align: left;
+    padding: 30px 40px;
+}
+.apsistojimas_namai li {
+    margin-left: 20px;
+    list-style-type: disc;
+    font-weight: 400;
+}
+.apsistojimas_namai hr {
+    border-top: 1px solid rgba(100, 100, 111, 0.3);
+    margin: 10px 13px;
+}
 .apsistojimas_img {
-    height: 300px;
-    width: auto;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 /* #viskas-iskaiciuota h4 {
     text-align: center;

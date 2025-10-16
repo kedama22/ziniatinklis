@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* Basic form styling for context */
+#planavimas_karjera form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+#karjera_elpastas, input[type="submit"] {
+    padding: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#karjera_elpastas {
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hides the accessibility labels */
+.pasleptas_txt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* ======================================= */
+/* CUSTOM FILE INPUT STYLING (CSS ONLY) */
+/* ======================================= */
+
+/* 1. Wrapper (Label) style */
+.custom-file-upload {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* Styles for the container of the file input */
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f7f7f7;
+    cursor: pointer; /* Makes the whole area clickable */
+    transition: background-color 0.2s;
+}
+
+.custom-file-upload:hover {
+    background-color: #f1f1f1;
+}
+
+/* 2. Hide the actual file input */
+.custom-file-upload input[type="file"] {
+    /* Standard technique to hide input but keep functionality */
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 3. Style the visible button */
+.upload-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    /* Ensure the button is always visible */
+    z-index: 1;
+}
+
+.custom-file-upload:hover .upload-button {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* 4. Style the static file name display */
+.file-name-static {
+    color: #6c757d; /* Gray text */
+    font-style: italic;
+    font-size: 14px;
+    flex-grow: 1;
+    /* Hide the static message if you prefer a cleaner look */
+    /* display: none; */ 
+}
+    </style>
+</head>
+<div id="planavimas_karjera">
+    <form>
+        <label for="karjera_elpastas" class="pasleptas_txt">El. paštas</label>
+        <input type="text" id="karjera_elpastas" placeholder="El. paštas" required>
+
+        <label for="cv" class="custom-file-upload">
+            <input type="file" id="cv" required>
+            <span class="upload-button">Pridėti CV</span>
+            <!-- <span class="file-name-static">Failas pridėtas</span> -->
+        </label>
+
+        <label for="karjera_pateikti" class="pasleptas_txt">Pateikti</label>
+        <input type="submit" value="Pateikti">
+    </form>
+</div>
