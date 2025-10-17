@@ -279,7 +279,7 @@ div .atsiliepimu_zvg {
 }
 
 /* Pridedame savo rodyklę per pseudo-elementą */
-#D-U-K summary::before {
+/* #D-U-K summary::before {
     content: "";
     background-image: url('images_fonts/duk_icon.webp');
     background-size: 100%;
@@ -300,12 +300,11 @@ div .atsiliepimu_zvg {
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
-    /* height: 100px; */
     transform: none;
     transform-origin: none;
     display: inline-block;
     transform-origin: left center;
-}
+} */
 
 #D-U-K p {
     padding: 0 15px 15px;
@@ -342,7 +341,6 @@ footer section {
 }
 
 footer h4 {
-    color: var(--akcento-spalva);
     margin-bottom: 15px;
     font-size: 1.1em;
 }
@@ -423,7 +421,7 @@ img.social_media {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #ka_pamatyti_virsus {
-    background: url('images_fonts/ka_pamatyti.png') no-repeat center center/cover;
+    background: url('images_fonts/bandom.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -498,11 +496,16 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin: 30px auto;
     width: 1450px;
 }
+#main_aside_apiemus {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
 #apie_mus h3 {
     margin-bottom: 50px;
 }
 #apie_mus_virsus {
-    background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
+    background: url(images_fonts/bandom.png) no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -543,15 +546,20 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     top: 2300px;
     left: 10px;
 }
-#projektai, #kompanija, #karjera {
+#projektai, #kompanija {
+    /* margin: 50px; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255);
+    width: 1150px;
+}
+#karjera {
+    margin-bottom: 60px;
     margin: 50px auto;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: rgba(255, 255, 255);
-    width: 1450px;
-}
-#karjera {
-    margin-bottom: 60px;
+    width: 600px;
 }
 #kompanijos_info {
     display: flex;
@@ -616,19 +624,24 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #projektas_3 {
     margin: 80px 0 50px;
 }
+#projektai p {
+    width: 400px;
+}
 .projektu_img {
     border-radius: 8px;
-    width: 500px;
+    width: 300px;
     height: auto;
-    margin-top: -35px;
+    margin-top: -15px;
 }
 #karjeros_img {
-    width: 550px;
+    width: 450px;
     height: auto;
+    margin: 0 auto;
     border-radius: 8px;
 }
 #karjera div {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     gap: 80px;
 }
@@ -685,7 +698,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     font-weight: 500;
 }
 #paslaugos_virsus {
-    background: url(images_fonts/20251002171750.png) no-repeat center center/cover;
+    background: url(images_fonts/bandom.png) no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;

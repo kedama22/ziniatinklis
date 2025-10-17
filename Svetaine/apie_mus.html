@@ -30,6 +30,8 @@
             </section>
         </div>
         <img src="images_fonts/Misc/weapon_bow.jpg" id="weapon_bow">
+        <!-- <div id="main_aside_apiemus"> -->
+        <main>
         <section id="kompanija">
             <h3>&bdquo;Teyvat Travels&rdquo; kompanija</h3>
             <div id="kompanijos_info">
@@ -40,9 +42,7 @@
                 mechaniką.<br> Mūsų darbuotojai – nuo neprilygstamų pilotų, žyminčių kiekvieną skrydį, 
                 iki kruopščiųjų žvalgų, kuris tiksliai apskaičiuoja 
                 net menkiausią vėjo gūsį, – yra visiškai atsidavę dangaus saugumui. 
-                Kiti komandos nariai, kaip inžinieriai, nuolat tobulina sklandytuvų 
-                konstrukcijas, leisdami mums pasiekti anksčiau neįmanomus aukščius 
-                ir atstumus.<br>&bdquo;Teyvat Travels&rdquo; kompanija - tai komanda, nepailsdamai dirbanti 
+                <br>&bdquo;Teyvat Travels&rdquo; kompanija - tai komanda, nepailsdamai dirbanti 
                 tam, kad jūs pasiektumėte bet kurį Teyvat žemyno kampelį.</p>
             <img src="images_fonts/genhsin_chars_komanda.webp" alt="Žaidimo veikėjų komanda" id="komanda_visa">
             </div>
@@ -86,7 +86,7 @@
             </div>
             <div>
                 <div id="projektas_2">
-                    <img src="images_fonts/dragonspine_statybos.png" alt="Statybų nuotrauka" class="projektu_img">
+                    <img src="images_fonts/Enkanomiya.webp" alt="Enkanomija" class="projektu_img">
                     <div>
                         <h4 id="projektas_2_h4">Statomas avarinių nusileidimų platformų tinklas</h4>
                         <p>Suprantant, kad net geriausi pilotai gali susidurti su nenumatytomis problemomis, 
@@ -115,12 +115,22 @@
                             ir vėjui gyventi darnoje, o kompanija įsipareigoja būti šios vizijos 
                             pavyzdžiu visam Teyvat žemynui.</p>
                     </div>
-                <img src="images_fonts/dragonspine_statybos.png" alt="Statybų nuotrauka" class="projektu_img">
+                <img src="images_fonts/Sumeru/vourukasha_oasis.jpg" alt="Vorukašos oazė" class="projektu_img">
                 </div>
             </div>
         </section>
+        </main>
         <img src="images_fonts/Misc/weapon_claymore.jpg" id="weapon_claymore">
-        <section id="karjera">
+        <input type="checkbox" id="karjera_toggle" hidden>
+        <label for="karjera_toggle" class="karjera_toggle_icon">
+            <img src="images_fonts/Misc/paimon_popup.png" alt="Mygtukas" class="paimon_popup">
+        </label>
+        <aside>
+            <header id="header_karjera">
+                <h3>Karjera</h3>
+                <label for="karjera-toggle" class="close-btn">×</label>
+            </header>
+            <section id="karjera">
             <h3>Karjera</h3>
             <div>
                 <img src="images_fonts/Fontaine/beryl_region.webp" alt="Fonten kaimo nuotrauka" id="karjeros_img">
@@ -149,6 +159,7 @@
                 </div>
             </div>
         </section>
+        </aside>
         <footer> <!-- FOOTERIS -->
             <section>
                 <div>
