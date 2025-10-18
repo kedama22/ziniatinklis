@@ -42,7 +42,6 @@ body {
     width: 600px;
     height: 650px;
     background-color: white;
-    border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
     z-index: 1000;
@@ -62,8 +61,8 @@ body {
 .popup header {
     background-color: #122746;
     padding: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +71,7 @@ body {
     font-family: genshin_paprastas;
     color: white;
     text-shadow: 2px 2px 5px black;
-    margin: 0;
+    margin: 0 30px;
 }
 .popup header label {
     color: white;
@@ -82,10 +81,65 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
-.popup .chat-body {
+.popup_body p {
+    font-weight: 500;
+    text-align: center;
+}
+.region_select_submit form {
+    margin: 10px auto;
+}
+.popup .popup_body {
     padding: 15px;
-    height: calc(100% - 40px);
-    overflow-y: auto;
+}
+#region_orai {
+    width: 540px;
+    margin: 20px auto;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 10px #1e1e1e; */
+    background-color: rgba(255, 255, 255, 0.47);
+}
+#region_orai h4 {
+    font-family: genshin_paprastas;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+#region_orai hr {
+    border-top: 1px solid rgba(16, 16, 83, 0.484);
+    margin: 0 40px;
+}
+#region_orai p {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+#orai_savaites_inazuma {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.orai_savaites_pr, .orai_savaites_an, .orai_savaites_tr, .orai_savaites_kt, .orai_savaites_pn, .orai_savaites_st, .orai_savaites_sk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orai_savaites_pr img, .orai_savaites_pn img {
+    height: 28px !important;
+    width: auto;
+}
+.orai_savaites_temp {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: -25px 0 0 !important;
+}
+.orai_savaites_img {
+    width: 40px;
+    height: auto;
+
 }
 /* ------------------ POP-UP END ------------------- */
 a {
@@ -96,7 +150,7 @@ nav a {
     font-weight: bold;
     /* padding: 5px 0; */
 }
-nav.main_menu a:hover { 
+nav.main_menu a:hover {
     color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
     border-bottom: 2px solid rgb(22, 129, 93); /* PAKEISTI SPALVA */
 }
@@ -402,7 +456,7 @@ footer a:hover {
 
 footer section {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     gap: 30px;
     padding: 0;
     margin-bottom: 20px;
@@ -836,7 +890,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #apsistojimas_beh3 summary {
     cursor: pointer;
     outline: none;
-    list-style: none; 
+    list-style: none;
 }
 #apsistojimas_beh3 details {
     flex-basis: 300px;
