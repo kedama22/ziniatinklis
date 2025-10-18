@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="lt">
+    <head>
+        <meta charset="utf-8">
+        <title lang="en">Teyvat travels</title>
+        <link rel="stylesheet" type="text/css" href="teyvat.css">
+        <link rel="icon" type="image/x-icon" href="images_fonts/svetaines_logo_dark.ico" media="(prefers-color-scheme: light)">
+        <link rel="icon" type="image/x-icon" href="images_fonts/svetaines_logo_light.ico" media="(prefers-color-scheme: dark)">
+        <!-- <link rel="icon" type="image/x-icon" href="images_fonts/svetaines_logo_dark.ico"> -->
+        <meta name="author" content="Saulė Gradeckaitė PI25">
+    </head>
+    <body id="registracija">
+        <div id="uzsakymas">
+        <header>
+            <div id="pavadinimas">
+            <img src="images_fonts/svetaines_logo.png" alt="T" id="logotipas"> <!-- logotipas pries teksta -->
+            <h1>eyvat travels</h1> 
+            </div>
+            <nav class="main_menu">
+                <ul>
+                    <li><a href="index.html">Pagrindinis</a></li>
+                    <li><a href="ka_pamatyti.html">Ką pamatyti</a></li>
+                    <li><a href="apie_mus.html">Apie mus</a></li>
+                    <li><a href="paslaugos.html">Paslaugos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="registracija_header"></div> <!-- PARASYTI ALT -->
+        </div>
+        <div id="main_aside">
+        <main>
+            <div id="registracija1">
+            <section>
+                <h2>Mokėtojo duomenys</h2>
+            </section>
+            <div id="registracijos_deze">
+                <form>
+                    <label for="Vardas" class="pasleptas_txt">Vardas</label>
+                    <input type="text" id="vardas" placeholder="Vardas" required>
+                    <label for="Pavarde" class="pasleptas_txt">Pavardė</label>
+                    <input type="text" id="pavarde" placeholder="Pavardė" required>
+                    <label for="Imone" class="pasleptas_txt">Įmonė</label>
+                    <input type="text" id="imone" placeholder="Įmonė">
+                    <label for="elpastas" class="pasleptas_txt">El. paštas</label>
+                    <input type="text" id="elpastas" placeholder="El. paštas" required>
+                </form>
+            </div> 
+            </div>
+        </main>
+        <aside>
+            <div id="krepselis">
+                <section>
+                    <h2>Skrydžių krepšelis</h2>
+                </section>
+                <div id="kelioniu_krepselis">
+                    <!-- PAZIURETI, KAIP KITOS KOMPANIJOS WATAFAKY -->
+                    <section id="kelione_krepselyje1">
+
+                    </section>
+                    <section id="kelione_krepselyje2">
+
+                    </section>
+                </div>
+            </div>
+            <div id="mokejimas">
+                <section>
+                    <h2>Mokėjimas</h2>
+                    <div id="mokejimo_budai">
+                        <ul>
+                            <li><a href="#">Elektroninė bankininkystė</a></li>
+                            <li><a href="#">Banko pavedimas</a></li>
+                            <li><a href="#">Įveskite kortelės duomenis</a></li>
+                        </ul>
+                    </div>
+                    <label for="Ieskoti" class="pasleptas_txt">Ieškoti</label> <!-- PASIZIURETI, KAD VEIKTU A HREF -->
+                    <input type="submit" value="Ieškoti">
+                </section>
+            </div>
+        </aside>    
+        </div>
+        <footer> <!-- FOOTERIS -->
+            <section>
+                <div>
+                    <h4>Kelionės planavimas</h4>
+                        <ul>
+                            <li><a href="#">Planavimas</a></li>
+                            <li><a href="ka_pamatyti.html">Lankytinos vietos</a></li>
+                            <li><a href="paslaugos.html">Papildomos paslaugos</a></li>
+                        </ul>
+                </div>
+                <div>
+                    <h4>Paslaugos</h4>
+                        <ul>
+                            <li><a href="paslaugos.html#auto-nuoma">Pavežėjimas</a></li> <!-- PATAISYTI, JEIGU KAŽKĄ KEISIU -->
+                            <li><a href="paslaugos.html#apsistojimas">Apsistojimas</a></li>
+                            <li><a href="paslaugos.html#viskas-iskaiciuota">"Viskas įskaičiuota" kelionės</a></li>
+                        </ul>
+                </div>
+                <div>
+                    <h4>Apie mus</h4>
+                        <ul>
+                            <li><a href="apie_mus.html">Apie mus</a></li>
+                            <li><a href="index.html#D-U-K">D.U.K.</a></li>
+                            <li><a href="apie_mus.html#projektai">Mūsų projektai</a></li>
+                            <li><a href="apie_mus.html#karjera">Karjera</a></li>
+                        </ul>
+                </div>
+            </section>
+            <img src="images_fonts/Misc/paimon.png" alt="Svetainės talismanas" id="paimon">
+            <div id="loading_screen">
+                <img src="images_fonts/Misc/loading_screen.png" alt="Žaidimo veikėjų galių ikonos" id="loading_screen">
+            </div>
+            <div id="social_media">
+            <h4>Sekite mus:</h4>
+            <a href="https://www.youtube.com/@GenshinImpact"><img src="images_fonts/Misc/youtube_icon.png" class="social_media"></a>
+            <a href="https://genshin-impact-updates.tumblr.com/"><img src="images_fonts/Misc/tumblr_icon.png" class="social_media"></a>
+            <a href="https://x.com/genshinimpact"><img src="images_fonts/Misc/twitter_icon.png" class="social_media"></a>
+            <a href="https://www.twitch.tv/genshinimpactofficial"><img src="images_fonts/Misc/twitch_icon.png" class="social_media"></a>
+            </div>
+        </footer>
+    </body>
+</html>
