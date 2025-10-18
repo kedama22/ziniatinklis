@@ -547,11 +547,11 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     left: 10px;
 }
 #projektai, #kompanija {
-    /* margin: 50px; */
+    margin: 50px auto;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: rgba(255, 255, 255);
-    width: 1150px;
+    width: 1450px;
 }
 #karjera {
     margin-bottom: 60px;
@@ -624,13 +624,13 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #projektas_3 {
     margin: 80px 0 50px;
 }
-#projektai p {
+/* #projektai p {
     width: 400px;
-}
+} */
 .projektu_img {
     border-radius: 8px;
-    width: 300px;
-    height: auto;
+    height: 300px;
+    width: auto;
     margin-top: -15px;
 }
 #karjeros_img {
