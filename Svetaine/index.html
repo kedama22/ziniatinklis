@@ -184,9 +184,35 @@
             </section>
         </div>
         </main>
-        
-        <aside>
-
+        <input type="checkbox" id="pop_up_toggle" hidden>
+            <label for="pop_up_toggle" class="paimon_icon">
+                <img src="images_fonts/Misc/paimon_popup.png" alt="Mygtukas papildomai informacijai" class="paimon_popup">
+            </label>
+        <aside class="popup">
+            <header>
+                    <h3>Orai</h3>
+                    <label for="chat-toggle" class="close-btn">×</label>
+            </header>
+            <div class="chat-body">
+                <p>This is a pure CSS assistant window!</p>
+                <div class="region_select_submit">
+                    <form>
+                        <label for="region_select" class="pasleptas_txt">Regionas</label>
+                        <select id="region_select" name="regions" required>
+                            <option value="" selected disabled hidden>Pasirinkite regioną</option>
+                            <option value="mondstadt">Mondstadt</option>
+                            <option value="liyue">Liyue</option>
+                            <option value="inazuma">Inazuma</option>
+                            <option value="sumeru">Sumeru</option>
+                            <option value="fontaine">Fontaine</option>
+                            <option value="natlan">Natlan</option>
+                            <option value="nod-krai">Nod-Krai</option>
+                        </select>
+                        <label for="pasirinkti" class="pasleptas_txt">Pasirinkti</label> <!-- PASIZIURETI, KAD VEIKTU A HREF -->
+                        <input type="submit" value="Pasirinkti">
+                    </form>
+                </div>
+            </div>
         </aside>
         <footer> <!-- FOOTERIS -->
             <section>
@@ -215,7 +241,7 @@
                         </ul>
                 </div>
             </section>
-            <img src="images_fonts/Misc/paimon.png" alt="Svetainės talismanas" id="paimon">
+            <img src="images_fonts/Misc/paimon.png" alt="Svetainės talismanas" class="paimon">
             <div id="loading_screen">
                 <img src="images_fonts/Misc/loading_screen.png" alt="Žaidimo veikėjų galių ikonos" id="loading_screen">
             </div>

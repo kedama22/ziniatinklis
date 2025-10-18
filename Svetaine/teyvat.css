@@ -20,6 +20,74 @@ body {
     font-family: 'genshin_paprastas';
     src: url(images_fonts/genshin_impact_paprastas.ttf);
 }
+/* ------------------ POP-UP ------------------- */
+.paimon_icon {
+    position: fixed;
+    cursor: pointer;
+    z-index: 1001;
+}
+.paimon_popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 180px;
+    height: auto;
+    border-radius: 0 0 70px 70px;
+}
+/* --- 2. Popup Default State (Hidden) --- */
+.popup {
+    position: fixed;
+    bottom: 80px; /* Adjust based on icon size */
+    right: 30px;
+    width: 600px;
+    height: 650px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0; /* slepiamas aside, kai nepaspausta */
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+/* --- 3. The TOGGLE LOGIC --- */
+/* Target the popup when the checkbox is checked using the Tilde (~) sibling selector */
+#pop_up_toggle:checked ~ .popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+/* --- 4. Internal Styling --- */
+.popup header {
+    background-color: #122746;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup header h3 {
+    font-family: genshin_paprastas;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin: 0;
+}
+.popup header label {
+    color: white;
+}
+.popup .close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+.popup .chat-body {
+    padding: 15px;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+}
+/* ------------------ POP-UP END ------------------- */
 a {
     text-decoration: none;
     transition: color 0.3s;
@@ -352,7 +420,7 @@ footer ul {
 footer li {
     margin-bottom: 8px;
 }
-#paimon {
+.paimon {
     display: flex;
     align-items: right;
     position: absolute;
