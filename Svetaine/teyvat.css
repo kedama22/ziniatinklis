@@ -210,6 +210,30 @@ body {
     width: auto;
     margin: 0 -30px -3px 0;
 }
+#apie_mus .popup h3 {
+    margin: 0 30px;
+}
+#apie_mus .popup_body div {
+    margin: 0 20px;
+}
+#apie_mus .popup_body h4 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+#apie_mus .popup_body p {
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: left;
+}
+#apie_mus .popup_body ul {
+    margin: 10px 0 0;
+}
+#apie_mus .popup_body li {
+    list-style: disc;
+    margin-left: 40px;
+    font-weight: 400;
+}
 /* ------------------ POP-UP END ------------------- */
 a {
     text-decoration: none;
@@ -744,14 +768,6 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     background-color: rgba(255, 255, 255);
     width: 1450px;
 }
-#karjera {
-    margin-bottom: 60px;
-    margin: 50px auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255);
-    width: 600px;
-}
 #kompanijos_info {
     display: flex;
     margin: 0 30px 50px 30px;
@@ -823,26 +839,6 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     height: 300px;
     width: auto;
     margin-top: -15px;
-}
-#karjeros_img {
-    width: 450px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-#karjera div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 80px;
-}
-#karjera div div {
-    display: initial;
-}
-#karjera li {
-    list-style: disc;
-    margin-left: 50px;
-    font-weight: 500;
 }
 #planavimas_karjera {
     display: flex;
