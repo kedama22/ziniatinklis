@@ -81,19 +81,44 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
-.popup_body p {
+.popup_body p:nth-of-type(1) {
+    margin-top: 15px;
+    font-size: 1.2em;
     font-weight: 500;
     text-align: center;
 }
 .region_select_submit form {
-    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px;
+    gap: 15px;
+}
+#region_select {
+    padding: 13px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* flex-grow: 1;
+    max-width: 120px; */
+}
+.region_select_submit input[type="submit"] {
+    background-color: #edb593; /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.region_select_submit input[type="submit"]:hover {
+    background-color: #c6977a;
 }
 .popup .popup_body {
     padding: 15px;
 }
 #region_orai {
     width: 540px;
-    margin: 20px auto;
+    margin: 15px auto;
     border-radius: 8px;
     /* box-shadow: 0 4px 10px #1e1e1e; */
     background-color: rgba(255, 255, 255, 0.47);
@@ -112,6 +137,11 @@ body {
     text-align: left;
     font-size: 1.2em;
     margin: 10px 0 5px;
+}
+#orai_announcement p {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 10px 0 0 25px;
 }
 #orai_savaites_inazuma {
     margin: 20px 0;
@@ -139,7 +169,46 @@ body {
 .orai_savaites_img {
     width: 40px;
     height: auto;
+}
+.orai_rekomendacijos {
+    margin-top: 20px;
+}
+.orai_rekomendacijos p:nth-of-type(1) {
+    margin: 0 0 20px 25px;
+}
+.orai_rekomendacijos section {
+    display: grid; 
 
+    /* 2. Define 2 Columns */
+    /* '1fr' means one fractional unit. This makes the columns equal width. */
+    grid-template-columns: 1fr 1fr; 
+
+    /* 3. Define 2 Rows */
+    /* 'auto' tells the row to take the height of its content. */
+    grid-template-rows: auto auto; 
+    
+    /* Optional: Add space between grid cells */
+    gap: 10px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+}
+.orai_rekomendacijos div {
+    display: flex;
+    align-items: center;
+    background-color: #a4d4f2;
+    border-radius: 8px;
+    gap: 40px;
+    padding:5px 10px;
+}
+.orai_rekomendacijos div p {
+    font-weight: 400 !important;
+    font-size: 1em !important;
+}
+.savaites_oru_info_img {
+    height: 25px;
+    width: auto;
+    margin: 0 -30px -3px 0;
 }
 /* ------------------ POP-UP END ------------------- */
 a {
