@@ -178,19 +178,11 @@ body {
 }
 .orai_rekomendacijos section {
     display: grid; 
-
-    /* 2. Define 2 Columns */
-    /* '1fr' means one fractional unit. This makes the columns equal width. */
     grid-template-columns: 1fr 1fr; 
-
-    /* 3. Define 2 Rows */
-    /* 'auto' tells the row to take the height of its content. */
     grid-template-rows: auto auto; 
-    
-    /* Optional: Add space between grid cells */
     gap: 10px 20px;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 0;
 }
 .orai_rekomendacijos div {
@@ -233,6 +225,37 @@ body {
     list-style: disc;
     margin-left: 40px;
     font-weight: 400;
+}
+#paslaugos .popup_body section {
+    display: flex;
+    gap: 30px;
+}
+#paslaugos .popup_body section:nth-of-type(1) {
+    margin: 5px 0;
+}
+#paslaugos .popup_body section:nth-of-type(2) {
+    margin: 20px 0 5px 0;
+}
+#paslaugos .popup_body section div {
+    margin-top: -20px;
+}
+#paslaugos .popup_body section h4 {
+    text-align: center;    
+}
+#paslaugos .reklama_img {
+    border-radius: 8px;
+    height: 190px;
+    width: auto;
+}
+#paslaugos .popup_body p {
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+#paslaugos .popup_body hr {
+    border-top: 1px solid rgba(1, 1, 25, 0.484);
+    margin: 0 40px;
 }
 /* ------------------ POP-UP END ------------------- */
 a {
@@ -841,6 +864,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin-top: -15px;
 }
 #planavimas_karjera {
+    margin: 20px auto !important;
     display: flex;
     justify-content: baseline;
     align-items: center;
