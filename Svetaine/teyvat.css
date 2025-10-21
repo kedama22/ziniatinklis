@@ -865,10 +865,11 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 }
 #apie_mus .popup_body div p:nth-of-type(2) {
     font-weight: 500;
+    font-size: 1.1em;
 }
 #planavimas_karjera_be_submit {
     margin: 20px auto !important;
-    gap: 15px;
+    gap: 20px;
     display: flex; /* INHERIT YIPPEE */
     justify-content: center;
     align-items: center;
