@@ -863,25 +863,29 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     width: auto;
     margin-top: -15px;
 }
-#planavimas_karjera {
-    margin: 20px auto !important;
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
+#apie_mus .popup_body div p:nth-of-type(2) {
+    font-weight: 500;
 }
-#planavimas_karjera form {
+#planavimas_karjera_be_submit {
+    margin: 20px auto !important;
     gap: 15px;
+    display: flex; /* INHERIT YIPPEE */
+    justify-content: center;
+    align-items: center;
 }
 #karjera_elpastas {
     padding: 15px 20px;
     border: 1px solid #ccc;
+    font-size: 1em;
     border-radius: 8px;
 }
 #planavimas_karjera input[type="submit"] {
+    margin-left: 15px;
     background-color: #e8b73b; /* PAKEISTI SPALVA */
     color: black;
     font-weight: bold;
-    padding: 10px 20px;
+    font-size: 1em;
+    padding: 15px 20px;
     border: none;
     cursor: pointer;
     border-radius: 8px;
@@ -890,7 +894,36 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #planavimas_karjera input[type="submit"]:hover {
     background-color: #caa337; /* Tamsesnė akcento spalva užvedus pelyte */
 }
-#planavimas_karjera input[type="file"] {
+#karjera_cv {
+    margin: 0 !important;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-wrap: nowrap;
+}
+#cv {
+    display: none;
+}
+.karjera_failas {
+    font-size: 1em;
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: 1px solid #007bff;
+    transition: background-color 0.3s;
+}
+#pasirinktas_failas {
+    text-align: center;
+    padding: 0 12px 0 4px;
+    font-size: 1em;
+    color: #555;
+}
+.karjera_failas:hover {
+    background-color: #122746;
+}
+/* #planavimas_karjera input[type="file"] {
     background-color: white;
     border: 1px solid #ccc;
     color: black;
@@ -900,7 +933,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s;
-}
+} */
 #auto-nuoma {
     margin: auto;
     width: 1500px;
