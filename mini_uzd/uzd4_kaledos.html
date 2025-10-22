@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kalėdos</title>
+        <link rel="icon" type="image/png" href="images/holly.png">
+        <style>
+            html {
+                background: url(images/dark-blue-bg.jpg)
+                no-repeat center center fixed;
+                background-size: cover;
+            }
+            body {
+                color: white;
+                font-family: tahoma, sans-serif;
+                width: 50%;
+                border: 36px solid transparent;
+                border-image: url(images/border.png) 36 36 round;
+            }
+            header {
+                text-align: center;
+            }
+            hr {
+                background: url(images/snowflake-row.png) 100% no-repeat;
+                height: 63px;
+                width: 500px;
+                border: 0;
+                margin: 0 auto;
+                clear: both;
+            }
+            h1 {
+                text-align: center;
+                font-size: 2em;
+                clear:both;
+            }
+            h1#img::before {
+                content: url(images/xmas-tree.png);
+            }
+            h1#img::after {
+                content: url(images/xmas-bells.png);
+            }
+            h1::before {
+                content: url(images/xmas-bells.png);
+            }
+            h1::after {
+                content: url(images/xmas-tree.png);
+            }
+            #santa {
+                border: 3px double white;
+                float: right;
+                margin-left: 10px;
+            }
+            p {
+                text-align: justify;
+            }
+            #tree {
+                border: 1px solid white;
+                padding: 1px;
+                float: left;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="images/title.png" alt="Kalėdinė svetainė">
+            <hr>
+        </header>
+        <section>
+            <article>
+                <h1 id="img">Kalėdiniai simboliai</h1>
+                <h2>Kalėdų senelis</h2>
+                <img src="images/santa-claus-reindeer.jpg" alt="Kalėdų senelis" id="santa">
+                <p>Kalėdų senelis vilki raudonai baltais drabužiais, skrieja rogėmis, pakinkytomis
+                    9 elniais. Kalėdų senelis gyvena Šiaurės Ašigalyje, Laplandijoje. Jis mėgsta
+                    pripildyti kojines smulkiomis dovanėlėmis ar padėti dovanų po eglute gruodžio 24 d.
+                    naktį. Į namus jis patenka pro kaminą arba orlaidę...</p>
+                <hr>
+                <h2>Kalėdinė eglutė</h2>
+                <img src="images/xmas-tree.gif" alt="Kalėdinė eglutė" id="tree">
+                <p>Eglutė Kalėdų šventei pasirinkta dėl to, kad tai visžalis
+                    medis, simbolizuojantis gyvybę ir amžino gyvenimo viltį. Kalėdų eglutės atneša į namus
+                    ne tik kalėdinę nuotaiką, bet ir malonų miško kvapą. Manoma, kad trikampė eglutės forma
+                    simbolizuoja Šv. Trejybę &mdash; Dievą Tėvą, Dievą Sūnų ir Dievą Šv. Dvasią.</p>
+                <hr>
+                <h2>Kalėdų senelis</h2>
+                <img src="images/santa-claus-second.jpg" alt="Kalėdų senelis" id="santa">
+                <p>Kalėdų senelis vilki raudonai baltais drabužiais, skrieja rogėmis, pakinkytomis
+                    9 elniais. Kalėdų senelis gyvena Šiaurės Ašigalyje, Laplandijoje. Jis mėgsta
+                    pripildyti kojines smulkiomis dovanėlėmis ar padėti dovanų po eglute gruodžio 24 d.
+                    naktį. Į namus jis patenka pro kaminą arba orlaidę...</p>
+                <h1>Kalėdiniai simboliai</h1>
+            </article>
+        </section>
+    </body>
+</html>

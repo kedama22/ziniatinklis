@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            body {background: #FC6;}
+            #page {
+                background: #F86;
+                margin: 0 auto;
+                width: 600px;
+            }
+            header, footer {
+                clear: both;
+                text-align: center;
+                width: 100%;
+            }
+            header {background: #FC6;}
+            header h1 {
+                padding: 10px;
+            }
+            #subhead {
+                border-bottom: 1px solid black;
+                border-top: 1px solid black;
+                padding: 0 10px;
+                text-align: right;
+            }
+            footer {
+                background: #FFF166;
+                border: 1px solid black;
+                padding: 10px 0;
+            }
+            #menu {
+                background: #F86;
+                float: left;
+                padding: 0 10px;
+            }
+            #menu ul {
+                list-style: none;
+            }
+            #content {
+                background: #FFF;
+                float: right;
+                min-height: 500px;
+                padding: 0 10px;
+                width: 70%;
+            }
+            #content h2 {margin: 10px 0;}
+            table {
+                border: 3px solid black;
+                margin: 20px auto;
+            }
+            table tr th {
+                font-weight: normal;
+                background-color: green;
+                color: white;
+            }
+            table tr th, td {
+                padding: 0 5px;
+                border: 1px solid gray;
+                text-align: center;
+            }
+            table tr:nth-of-type(1) th {
+                font-weight: bold;
+            }
+            table tr:nth-of-type(1) th:nth-of-type(2) {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <header>
+                <h1>Puslapio pavadinimas</h1>
+                <div id="subhead">Puslapio šūkis</div>
+            </header>
+            <div id="menu">
+                <h2>Meniu</h2>
+                <ul>
+                    <li>Pirmas punktas</li>
+                    <li>Antras punktas</li>
+                    <li>Trečias punktas</li>
+                </ul>
+            </div>
+            <div id="content">
+                <h2>Puslapio tekstas</h2>
+                <p>Daug teksto</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Atstumai kilometrais</th>
+                    </tr>
+                    <tr>
+                        <th>Miestas</th>
+                        <th>Alytus</th>
+                        <th>Druskininkai</th>
+                        <th>Kaunas</th>
+                        <th>Palanga</th>
+                        <th>Vilnius</th>
+                    </tr>
+                    <tr>
+                        <th>Alytus</th>
+                        <td>---</td>
+                        <td>57</td>
+                        <td>66</td>
+                        <td>301</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <th>Druskininkai</th>
+                        <td>57</td>
+                        <td>---</td>
+                        <td>119</td>
+                        <td>341</td>
+                        <td>128</td>
+                    </tr>
+                    <tr>
+                        <th>Kaunas</th>
+                        <td>66</td>
+                        <td>119</td>
+                        <td>---</td>
+                        <td>236</td>
+                        <td>101</td>
+                    </tr>
+                    <tr>
+                        <th>Palanga</th>
+                        <td>301</td>
+                        <td>341</td>
+                        <td>236</td>
+                        <td>---</td>
+                        <td>331</td>
+                    </tr>
+                    <tr>
+                        <th>Vilnius</th>
+                        <td>101</td>
+                        <td>128</td>
+                        <td>101</td>
+                        <td>331</td>
+                        <td>---</td>
+                    </tr>
+                </table>
+            </div>
+            <footer>
+                Autorinės teisės ir kt. ribojimai
+            </footer>
+        </div>
+    </body>
+</html>
