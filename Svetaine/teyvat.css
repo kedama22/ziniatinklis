@@ -14,11 +14,11 @@ body {
 }
 @font-face {
     font-family: 'genshin_didelis';
-    src: url(images_fonts/Genshin_Impact_DRIP_FONT.ttf);
+    src: url('images_fonts/Genshin_Impact_DRIP_FONT.ttf');
 }
 @font-face {
     font-family: 'genshin_paprastas';
-    src: url(images_fonts/genshin_impact_paprastas.ttf);
+    src: url('images_fonts/genshin_impact_paprastas.ttf');
 }
 /* ------------------ POP-UP ------------------- */
 .paimon_icon {
@@ -743,7 +743,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     margin-bottom: 50px;
 }
 #apie_mus_virsus {
-    background: url(images_fonts/bandom.png) no-repeat center center/cover;
+    background: url('images_fonts/bandom.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -940,7 +940,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     font-weight: 500;
 }
 #paslaugos_virsus {
-    background: url(images_fonts/bandom.png) no-repeat center center/cover;
+    background: url('images_fonts/bandom.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
