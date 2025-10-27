@@ -1,0 +1,946 @@
+html {
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e1e1e; /* PAKEISTI SPALVA */
+}
+body {
+    background-color: #f4f7f6;
+    line-height: 1.6;
+}
+@font-face {
+    font-family: 'genshin_didelis';
+    src: url('images_fonts/Genshin_Impact_DRIP_FONT.ttf');
+}
+@font-face {
+    font-family: 'genshin_paprastas';
+    src: url('images_fonts/genshin_impact_paprastas.ttf');
+}
+/* ------------------ POP-UP ------------------- */
+.paimon_icon {
+    position: fixed;
+    cursor: pointer;
+    z-index: 1001;
+}
+.paimon_popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 180px;
+    height: auto;
+    border-radius: 0 0 70px 70px;
+}
+/* --- 2. Popup Default State (Hidden) --- */
+.popup {
+    position: fixed;
+    bottom: 80px; /* Adjust based on icon size */
+    right: 30px;
+    width: 600px; /* Base width */
+    height: 650px; /* Base height */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 0; /* slepiamas aside, kai nepaspausta */
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+/* --- 3. The TOGGLE LOGIC --- */
+/* Target the popup when the checkbox is checked using the Tilde (~) sibling selector */
+#pop_up_toggle:checked ~ .popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+/* --- 4. Internal Styling --- */
+.popup header {
+    background-color: #122746;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup header h3 {
+    font-family: genshin_paprastas;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    margin: 0 30px;
+}
+.popup header label {
+    color: white;
+}
+.popup .close-btn {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+.popup_body p:nth-of-type(1) {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+}
+.region_select_submit form {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 10px;
+    gap: 15px;
+}
+#region_select {
+    padding: 13px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* flex-grow: 1;
+    max-width: 120px; */
+}
+.region_select_submit input[type="submit"] {
+    background-color: #edb593; /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+.region_select_submit input[type="submit"]:hover {
+    background-color: #c6977a;
+}
+.popup .popup_body {
+    padding: 15px;
+}
+#region_orai {
+    width: 540px;
+    margin: 15px auto;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 10px #1e1e1e; */
+    background-color: rgba(255, 255, 255, 0.47);
+}
+#region_orai h4 {
+    font-family: genshin_paprastas;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px 0;
+}
+#region_orai hr {
+    border-top: 1px solid rgba(16, 16, 83, 0.484);
+    margin: 0 40px;
+}
+#region_orai p {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+#orai_announcement p {
+    text-align: left;
+    font-size: 1.2em;
+    margin: 10px 0 0 25px;
+}
+#orai_savaites_inazuma {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.orai_savaites_pr, .orai_savaites_an, .orai_savaites_tr, .orai_savaites_kt, .orai_savaites_pn, .orai_savaites_st, .orai_savaites_sk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.orai_savaites_pr img, .orai_savaites_pn img {
+    height: 28px !important;
+    width: auto;
+}
+.orai_savaites_temp {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: -25px 0 0 !important;
+}
+.orai_savaites_img {
+    width: 40px;
+    height: auto;
+}
+.orai_rekomendacijos {
+    margin-top: 20px;
+}
+.orai_rekomendacijos p:nth-of-type(1) {
+    margin: 0 0 20px 25px;
+}
+.orai_rekomendacijos section {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto; 
+    gap: 10px 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0;
+}
+.orai_rekomendacijos div {
+    display: flex;
+    align-items: center;
+    background-color: #a4d4f2;
+    border-radius: 8px;
+    gap: 40px;
+    padding:5px 10px;
+}
+.orai_rekomendacijos div p {
+    font-weight: 400 !important;
+    font-size: 1em !important;
+}
+.savaites_oru_info_img {
+    height: 25px;
+    width: auto;
+    margin: 0 -30px -3px 0;
+}
+#apie_mus .popup h3 {
+    margin: 0 30px;
+}
+#apie_mus .popup_body div {
+    margin: 0 20px;
+}
+#apie_mus .popup_body h4 {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+#apie_mus .popup_body p {
+    margin-top: 5px;
+    font-size: 1em;
+    text-align: left;
+}
+#apie_mus .popup_body ul {
+    margin: 10px 0 0;
+}
+#apie_mus .popup_body li {
+    list-style: disc;
+    margin-left: 40px;
+    font-weight: 400;
+}
+#paslaugos .popup_body section {
+    display: flex;
+    gap: 30px;
+}
+#paslaugos .popup_body section:nth-of-type(1) {
+    margin: 5px 0;
+}
+#paslaugos .popup_body section:nth-of-type(2) {
+    margin: 20px 0 5px 0;
+}
+#paslaugos .popup_body section div {
+    margin-top: -20px;
+}
+#paslaugos .popup_body section h4 {
+    text-align: center;
+}
+#paslaugos .reklama_img {
+    border-radius: 8px;
+    height: 190px;
+    width: auto;
+}
+#paslaugos .popup_body p {
+    font-weight: 400;
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+#paslaugos .popup_body hr {
+    border-top: 1px solid rgba(1, 1, 25, 0.484);
+    margin: 0 40px;
+}
+/* ------------------ POP-UP END ------------------- */
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a {
+    font-weight: bold;
+    /* padding: 5px 0; */
+}
+nav.main_menu a:hover {
+    color: rgb(22, 129, 93); /* PAKEISTI SPALVA */
+    border-bottom: 2px solid rgb(22, 129, 93); /* PAKEISTI SPALVA */
+}
+.pasleptas_txt {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5% 20px 5%;
+    background-color: white;
+    box-shadow: 0 2px 4px #1e1e1e;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+#logotipas {
+    height: 70px;
+    width: auto;
+}
+#pavadinimas {
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    font-family: genshin_didelis;
+    font-size: 2em;
+    position: relative;
+    top: 20px;
+    margin-left: -23px;
+}
+#uzsakymas {
+    background: url('images_fonts/bandom.png') no-repeat center center/cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#index h2, #pamatyti h2, #apie_mus h2, #paslaugos h2 {
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px #1e1e1e;
+    margin: 50px 50px 20px 50px;
+}
+#planavimas {
+    width: 1300px; /* Base width */
+    margin: 0 auto 50px;
+    background-color: rgba(255, 255, 255, 0.87); /* Pusiau permatomas fonas */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #1e1e1e;
+}
+#planavimas form {
+    display: flex;
+    flex-wrap: wrap; /* Leisti elementams persikelti į naują eilutę, jei netelpa */
+    justify-content: center;
+    gap: 15px;
+}
+#planavimas input[type="date"] {
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1; /* Leisti laukeliams augti, bet tik iki tam tikro dydžio */
+    min-width: 150px;
+    max-width: 250px;
+}
+#isvyk, #atvyk {
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-grow: 1;
+    width: 150px;
+}
+#zmoniu_sk {
+    padding: 20px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100px;
+    flex-grow: 1;
+}
+#planavimas input[type="submit"] {
+    background-color: #d87055; /* PAKEISTI SPALVA */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+#planavimas input[type="submit"]:hover {
+    background-color: #e0b33b; /* Tamsesnė akcento spalva užvedus pelyte */
+}
+/* Element symbols are decorative, hide them on small screens or adjust position */
+#pyro_symbol, #cryo_symbol, #geo_symbol {
+    z-index: -1;
+    opacity: 4%;
+    position: absolute;
+    /* Base styles, will be adjusted/hidden in media queries */
+}
+#pyro_symbol {
+    height: 600px;
+    width: 550px;
+}
+#cryo_symbol {
+    right: 10px;
+    margin: -40px 0 0 0;
+    height: 650px;
+    width: auto;
+}
+#geo_symbol {
+    margin: 80px 0 0 10px;
+    height: 600px;
+    width: auto;
+}
+h3 {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0 20px;
+    color: #1e1e1e;
+}
+#vietos {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 5%;
+}
+#vietos figure {
+    flex-basis: 250px;
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#vietos figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #1e1e1e;
+}
+#index .vietu_img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%; /* Make images fill container for responsiveness */
+}
+
+figcaption {
+    padding: 15px 10px;
+    font-weight: bold;
+    background-color: white;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.1em;
+    gap: 25px;
+}
+
+section {
+    padding: 30px 5%;
+    margin-bottom: 20px;
+}
+/* Atsiliepimai styling */
+#atsiliepimu_deze {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow reviews to wrap on smaller screens */
+    padding: 0 5%; /* Adjust padding for wrapping */
+}
+
+section div.atsiliepimai {
+    /* display: inline-block; - changing to flex basis for responsiveness */
+    flex-basis: 300px; /* Base size for one review */
+    margin: 10px; /* Reduced margin for spacing */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px 5px;
+    max-width: 500px; /* Keep max width */
+}
+h5 {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9em;
+    color: #03225D;
+}
+div.atsiliepimai p {
+    text-align: center;
+    padding: 15px 7px;
+    font-weight: 400;
+}
+div .atsiliepimu_img {
+    border-radius: 50%;
+    height: 90px;
+    display: block; /* Change from flex to block for centering in flow */
+    margin: 10px auto;
+}
+div .atsiliepimu_zvg {
+    height: 18px;
+    display: block;
+    margin: 5px auto;
+}
+#D-U-K details {
+    max-width: 1100px;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+#D-U-K details:hover {
+    background-color: #f9f9f9;
+}
+
+#D-U-K summary {
+    font-weight: bold;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    list-style: none; /* Paslėpti standartinę rodyklę */
+}
+.klausimas {
+    display: flex;
+    align-items: center;
+}
+#D-U-K summary::-webkit-details-marker {
+    display: none; /* Paslėpti Chrome/Safari rodyklę */
+}
+
+#D-U-K p {
+    padding: 0 15px 15px;
+    font-weight: 500;
+}
+.duk-ul li {
+    list-style: disc;
+    margin-left: 50px;
+    font-weight: 500;
+}
+
+footer {
+    background-color: #a4d4f2;
+    color: #1e1e1e;
+    padding: 30px 5%;
+    position: relative;
+}
+
+footer a {
+    color: #1e1e1e;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #c89772;
+}
+
+footer section {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 8px;
+}
+.paimon {
+    display: flex;
+    align-items: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 300px;
+    width: auto;
+    z-index: 1000;
+}
+#loading_screen {
+    /* Assuming this is a decorative element inside the footer,
+    it might need sizing/hiding adjustments */
+    display: none; /* Hiding the second element with this ID to avoid conflict and keep focus on responsiveness */
+}
+/* Re-applying original style if needed, assuming the ID is inside a div */
+footer > #loading_screen {
+    /* height: 200px; */ /* Example size */
+    /* width: auto; */
+    display: block; /* Make it visible if it's meant to be */
+    /* Adjust positioning if needed */
+}
+
+#social_media {
+    text-align: center;
+    margin-top: 20px;
+}
+#social_media h4 {
+    margin-bottom: 10px;
+}
+.social_media {
+    height: 40px;
+    width: auto;
+    margin: 0 5px;
+}
+
+
+/* ========================================================================= */
+/* MEDIA QUERIES                               */
+/* ========================================================================= */
+
+/* --- Tablet / Medium Screens (Max width 1300px) --- */
+@media (max-width: 1300px) {
+    #planavimas {
+        width: 90%; /* Scale down the main form container */
+    }
+    /* Allow form elements to take more width if space is limited, but keep max-width for sanity */
+    #planavimas input[type="date"],
+    #isvyk,
+    #atvyk {
+        max-width: 300px;
+    }
+    #zmoniu_sk {
+        max-width: 150px;
+    }
+    /* Hide the element symbols as they take up space */
+    #pyro_symbol, #cryo_symbol, #geo_symbol {
+        display: none;
+    }
+    /* Adjust footer layout for better stacking if elements are wider */
+    footer section {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+    }
+    footer section > div {
+        flex-basis: 40%; /*Each column takes up less than half the space */
+    }
+    .paimon {
+        height: 200px; /* Smaller footer mascot */
+    }
+}
+
+/* --- Small / Mobile Screens (Max width 800px) --- */
+@media (max-width: 800px) {
+    /* Header/Navigation adjustments */
+    header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        padding: 10px 5%;
+    }
+    #pavadinimas {
+        margin-bottom: 10px;
+    }
+    header h1 {
+        font-size: 1.5em; /* Smaller main heading */
+        top: 15px;
+    }
+    nav ul {
+        gap: 15px; /* Tighter navigation links */
+        justify-content: center;
+        font-size: 1em;
+    }
+
+    /* Main Content Heading */
+    #index h2, #pamatyti h2, #apie_mus h2, #paslaugos h2 {
+        font-size: 2em;
+        margin: 30px 10px 15px;
+    }
+
+    /* Travel Planning Form */
+    #planavimas {
+        width: 95%;
+        margin: 0 auto 30px;
+    }
+    #planavimas form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 10px;
+    }
+    #planavimas input[type="date"],
+    #isvyk,
+    #atvyk,
+    #zmoniu_sk {
+        width: 100%; /* Full width for form fields */
+        max-width: none; /* Remove max-width constraint */
+        padding: 15px 10px; /* Slightly smaller padding */
+    }
+    #planavimas input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+    }
+
+    /* Popular Destinations */
+    #vietos {
+        flex-direction: column; /* Stack destinations vertically */
+        align-items: center;
+    }
+    #vietos figure {
+        flex-basis: 90%; /* Almost full width */
+        max-width: 400px;
+    }
+
+    /* Reviews */
+    #atsiliepimu_deze {
+        flex-direction: column; /* Stack reviews vertically */
+        align-items: center;
+        padding: 0 10px;
+    }
+    section div.atsiliepimai {
+        width: 90%;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+
+    /* FAQ Section */
+    #D-U-K details {
+        max-width: 95%;
+    }
+    #D-U-K summary {
+        padding: 10px;
+    }
+    .duk-ul li {
+        margin-left: 30px;
+    }
+
+    /* Footer */
+    footer section {
+        flex-direction: column; /* Stack footer columns vertically */
+        align-items: center;
+        gap: 20px;
+    }
+    footer section > div {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    footer ul {
+        padding: 0;
+    }
+    .paimon {
+        display: none; /* Hide large decorative mascot on mobile */
+    }
+    #social_media {
+        margin-top: 10px;
+    }
+
+    /* Popup/Aside Adjustments */
+    .paimon_popup {
+        width: 120px; /* Smaller floating icon */
+    }
+    .popup {
+        /* Full-screen or large modal style */
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    #region_orai {
+        width: 95%;
+        margin: 15px auto;
+    }
+    .orai_rekomendacijos section {
+        grid-template-columns: 1fr; /* Stack weather recommendations vertically */
+        max-width: 90%;
+    }
+}
+
+/* --- Extra Small Screens (Max width 480px) --- */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3em;
+        top: 12px;
+        margin-left: -18px;
+    }
+    #logotipas {
+        height: 50px;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Allow nav links to wrap if necessary */
+        justify-content: space-around;
+        gap: 10px;
+    }
+    nav.main_menu a {
+        padding: 5px;
+    }
+}
+/* --- Global Max Widths for all large containers --- */
+@media (max-width: 1500px) {
+    /* Reduce overall width of the main content blocks on large screens before full responsiveness kicks in */
+    div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai,
+    #projektai, #kompanija, #auto-nuoma, #apsistojimas {
+        width: 95%; /* Use a percentage for flexibility */
+        max-width: 1450px; /* Keep a max width for very large screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --- Tablet and Mobile Adjustments (Up to 768px) --- */
+@media (max-width: 768px) {
+    /* 1. General Layouts & Fixed Widths */
+    #vietu_aprasymai p {
+        width: auto; /* Remove fixed width */
+        margin-top: 20px;
+        padding: 0 15px 15px; /* Add padding for better readability */
+    }
+
+    #loading_screen::before, #loading_screen::after {
+        margin: 0 10px; /* Reduce horizontal margin for the lines */
+    }
+
+    /* 2. Multi-Column Layouts - Stack them vertically */
+    .region_showcase,
+    #main_aside_apiemus,
+    #kompanijos_info,
+    #projektas_1,
+    #projektas_2,
+    #projektas_3,
+    #apsistojimas_beh3,
+    #main_aside {
+        flex-direction: column;
+        gap: 30px; /* Adjust gap for vertical stacking */
+        margin: 30px 20px; /* Adjust margins */
+    }
+    
+    /* Center the stacked project content */
+    #projektas_1, #projektas_2, #projektas_3 {
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Adjust registration/cart forms */
+    #main_aside {
+        top: 0; /* REMOVE NEGATIVE TOP OFFSET on mobile */
+        padding: 0 10px;
+        gap: 0; /* Remove gap if not needed */
+    }
+
+    #registracija1, #krepselis, #mokejimas {
+        width: 95%;
+        max-width: 600px;
+        margin: 20px auto;
+        top: 0; /* Ensure no residual absolute positioning issues */
+    }
+    
+    /* Make form inputs take up the full width of their container */
+    #vardas, #pavarde, #imone, #elpastas {
+        width: 100%;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    }
+    
+    /* 3. Navigation and Fixed Elements */
+    div#region_showcase_nav {
+        position: static; /* Make the navigation flow with the content */
+        transform: none;
+        left: auto;
+        top: auto;
+        padding: 10px 0;
+        text-align: center;
+    }
+    div#region_showcase_nav ul {
+        flex-direction: row; /* Display icons horizontally at the top/bottom */
+        justify-content: center;
+        flex-wrap: wrap; /* Allow icons to wrap if needed */
+    }
+    .region_showcase_a::after {
+        display: none; /* Hide hover text labels on touch devices */
+    }
+    .region_showcase_a {
+        padding: 10px;
+    }
+
+    /* 4. Decorative Backgrounds - Hide for performance/simplicity */
+    #dots1, #dots2,
+    #weapon_bow, #weapon_polearm, #weapon_claymore,
+    #weapon_claymore_mavuika,
+    #dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2,
+    #anemo_symbol, #anemo_symbol_upsidedown,
+    #geo_symbol_ka_pamatyti, #geo_symbol_ka_pamatyti_upsidedown,
+    #electro_symbol, #electro_symbol_upsidedown,
+    #dendro_symbol, #dendro_symbol_upsidedown,
+    #hydro_symbol, #hydro_symbol_upsidedown,
+    #pyro_symbol_ka_pamatyti, #pyro_symbol_upsidedown,
+    #cryo_symbol_ka_pamatyti, #cryo_symbol_upsidedown {
+        display: none !important; /* Force hide all absolute background images */
+    }
+    
+    /* Special case for the absolutely positioned car image that breaks layout */
+    #pavezejimas_img {
+        position: static;
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    #auto-nuoma p {
+        width: auto;
+        margin: 20px;
+        text-align: left;
+    }
+    
+    /* Career/Form adjustments */
+    #planavimas_karjera_be_submit {
+        flex-direction: column;
+    }
+    
+    #planavimas_karjera input[type="submit"] {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #karjera_elpastas, #karjera_cv {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Registration/Payment */
+    #registracija_header {
+        height: 200px; /* Shorter header on mobile */
+    }
+}
+
+/* --- Small Mobile Adjustments (Up to 480px) --- */
+@media (max-width: 480px) {
+    /* Project/Image size adjustment */
+    .projektu_img {
+        height: auto;
+        max-width: 100%;
+    }
+    
+    /* Social Media centering */
+    div#social_media {
+        justify-content: center;
+        margin-top: 15px;
+    }
+    
+    /* Smaller padding/margins for compact screens */
+    .region_showcase {
+        margin: 20px 0;
+    }
+    
+    #paslaugos_uzsakymas {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    #paslaugos_uzsakymas ul {
+        flex-wrap: wrap; /* Allow service list to wrap */
+    }
+    #paslaugos_uzsakymas ul li {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
