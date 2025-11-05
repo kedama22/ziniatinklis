@@ -1575,29 +1575,25 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         width: 100%;
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
-    
-    /* 3. Navigation and Fixed Elements */
+    li a img.region_showcase_href {
+    height: auto;
+    width: 30px;
+    display: block;
+    }
     div#region_showcase_nav {
-        position: static; /* Make the navigation flow with the content */
-        transform: none;
-        left: auto;
+        position: fixed; /* Make the navigation flow with the content */
+        left: 3px;
         top: auto;
-        padding: 10px 0;
+        padding: 0;
         text-align: center;
     }
     div#region_showcase_nav ul {
-        flex-direction: row; /* Display icons horizontally at the top/bottom */
-        justify-content: center;
-        flex-wrap: wrap; /* Allow icons to wrap if needed */
+        display: flex;
+        flex-direction: column;
     }
     .region_showcase_a::after {
         display: none; /* Hide hover text labels on touch devices */
     }
-    .region_showcase_a {
-        padding: 10px;
-    }
-
-    /* 4. Decorative Backgrounds - Hide for performance/simplicity */
     #dots1, #dots2,
     #weapon_bow, #weapon_polearm, #weapon_claymore,
     #weapon_claymore_mavuika,
@@ -1654,23 +1650,25 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         height: auto;
         max-width: 100%;
     }
-    
-    /* Social Media centering */
     div#social_media {
         justify-content: center;
         margin-top: 15px;
     }
-    
-    /* Smaller padding/margins for compact screens */
     .region_showcase {
         margin: 20px 0;
     }
-    
+    .region_showcase figure {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    #pamatyti .vietu_img {
+        max-width: 300px;
+        object-fit: cover;
+    }
     #paslaugos_uzsakymas {
         width: 95%;
         margin: 20px auto;
     }
-    
     #paslaugos_uzsakymas ul {
         flex-wrap: wrap; /* Allow service list to wrap */
     }
@@ -1896,28 +1894,13 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         width: 100%;
         box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
-    
-    /* 3. Navigation and Fixed Elements */
-    div#region_showcase_nav {
-        position: static; /* Make the navigation flow with the content */
-        transform: none;
-        left: auto;
-        top: auto;
-        padding: 10px 0;
-        text-align: center;
-    }
-    div#region_showcase_nav ul {
-        flex-direction: row; /* Display icons horizontally at the top/bottom */
-        justify-content: center;
-        flex-wrap: wrap; /* Allow icons to wrap if needed */
-    }
     .region_showcase_a::after {
         display: none; /* Hide hover text labels on touch devices */
     }
-    .region_showcase_a {
+    /* .region_showcase_a {
         padding: 10px;
     }
-    
+     */
     /* 4. Decorative Backgrounds - Hide for performance/simplicity */
     #dots1, #dots2,
     #weapon_bow, #weapon_polearm, #weapon_claymore,
