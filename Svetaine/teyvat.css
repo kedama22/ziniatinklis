@@ -822,6 +822,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
 #komanda_visa {
     display: inline-flex;
     height: 310px;
+    width: auto;
     border-radius: 8px;
 }
 #kompanija h4 {
@@ -1345,6 +1346,16 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     color: #8b3d5c;
 }
 /* -------------- @media -------------- */
+@media (max-width: 1500px) {
+    /* Reduce overall width of the main content blocks on large screens before full responsiveness kicks in */
+    div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai,
+    #projektai, #kompanija, #auto-nuoma, #apsistojimas {
+        width: 95%; /* Use a percentage for flexibility */
+        max-width: 1450px; /* Keep a max width for very large screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media (max-width: 1300px) {
     #planavimas {
         width: 90%; /* Scale down the main form container */
@@ -1371,6 +1382,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     footer section > div {
         flex-basis: 40%; /* Each column takes up less than half the space */
     }
+    
 }
 @media (max-width: 800px) {
     /* Header/Navigation adjustments */
@@ -1389,6 +1401,112 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         gap: 15px; /* Tighter navigation links */
         justify-content: center;
         font-size: 1em;
+    }
+    #pavadinimas {
+        margin-bottom: 10px;
+    }
+    #index h2, #pamatyti h2, #apie_mus h2, #paslaugos h2 {
+        font-size: 2em;
+        margin: 30px 10px 15px;
+    }
+    
+    /* Travel Planning Form */
+    #planavimas {
+        width: 95%;
+        margin: 0 auto 30px;
+    }
+    #planavimas form {
+        flex-direction: column; /* Stack form elements vertically */
+        gap: 10px;
+    }
+    #planavimas input[type="date"],
+    #isvyk,
+    #atvyk,
+    #zmoniu_sk {
+        width: 100%; /* Full width for form fields */
+        max-width: none; /* Remove max-width constraint */
+        padding: 15px 10px; /* Slightly smaller padding */
+    }
+    #planavimas input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    /* Popular Destinations */
+    #vietos {
+        flex-direction: column; /* Stack destinations vertically */
+        align-items: center;
+    }
+    #vietos figure {
+        flex-basis: 90%; /* Almost full width */
+        max-width: 400px;
+    }
+    
+    /* Reviews */
+    #atsiliepimu_deze {
+        flex-direction: column; /* Stack reviews vertically */
+        align-items: center;
+        padding: 0 10px;
+    }
+    section div.atsiliepimai {
+        width: 90%;
+        max-width: 450px;
+        margin: 10px auto;
+    }
+    
+    /* FAQ Section */
+    #D-U-K details {
+        max-width: 95%;
+    }
+    #D-U-K summary {
+        padding: 10px;
+    }
+    .duk-ul li {
+        margin-left: 30px;
+    }
+    footer section {
+        flex-direction: column; /* Stack footer columns vertically */
+        align-items: center;
+        gap: 20px;
+    }
+    footer section > div {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    footer ul {
+        padding: 0;
+    }
+    .paimon {
+        display: none; /* Hide large decorative mascot on mobile */
+    }
+    #social_media {
+        justify-content: center; /* Center social icons when footer stacks */
+        margin-top: 10px;
+    }
+    
+    /* Popup/Aside Adjustments */
+    .paimon_popup {
+        width: 120px; /* Smaller floating icon */
+    }
+    .popup {
+        /* Full-screen or large modal style */
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    /* Weather Widget Adjustments (from the fragment) */
+    #region_orai {
+        width: 95%;
+        margin: 15px auto;
+    }
+    .orai_rekomendacijos section {
+        grid-template-columns: 1fr; /* Stack weather recommendations vertically */
+        max-width: 90%;
     }
 
     /* Main Content Heading */
@@ -1495,37 +1613,17 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         max-width: 90%;
     }
 }
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.3em;
-        top: 12px;
-        margin-left: -18px;
-    }
-    #logotipas {
-        height: 50px;
-    }
-    nav ul {
-        flex-wrap: wrap; /* Allow nav links to wrap if necessary */
-        justify-content: space-around;
-        gap: 10px;
-    }
-    nav.main_menu a {
-        padding: 5px;
-    }
-}
-/* KA PAMATYTI */
-@media (max-width: 1500px) {
-    /* Reduce overall width of the main content blocks on large screens before full responsiveness kicks in */
-    div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai,
-    #projektai, #kompanija, #auto-nuoma, #apsistojimas {
-        width: 95%; /* Use a percentage for flexibility */
-        max-width: 1450px; /* Keep a max width for very large screens */
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
 @media (max-width: 768px) {
-    /* 1. General Layouts & Fixed Widths */
+    .popup header {
+        font-size: smaller;
+    }
+    .popup_body {
+        font-size: smaller;
+    }
+    .orai_savaites_img {
+        max-width: 40px;
+        height: auto;
+    }
     #vietu_aprasymai p {
         width: auto; /* Remove fixed width */
         margin-top: 20px;
@@ -1549,7 +1647,6 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         gap: 30px; /* Adjust gap for vertical stacking */
         margin: 30px 20px; /* Adjust margins */
     }
-    
     /* Center the stacked project content */
     #projektas_1, #projektas_2, #projektas_3 {
         align-items: center;
@@ -1643,10 +1740,29 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     #registracija_header {
         height: 200px; /* Shorter header on mobile */
     }
+    #auto-nuoma div {
+        height: auto;
+        padding-bottom: 20px; /* Ensure padding for content */
+    }
 }
 @media (max-width: 480px) {
-    /* Project/Image size adjustment */
-    .projektu_img {
+    header h1 {
+        font-size: 1.3em;
+        top: 12px;
+        margin-left: -18px;
+    }
+    #logotipas {
+        height: 50px;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Allow nav links to wrap if necessary */
+        justify-content: space-around;
+        gap: 10px;
+    }
+    nav.main_menu a {
+        padding: 5px;
+    }
+        .projektu_img {
         height: auto;
         max-width: 100%;
     }
@@ -1676,293 +1792,6 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         width: 100%;
         margin: 5px 0;
         text-align: center;
-    }
-}
-@media (max-width: 1500px) {
-    div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai,
-    #projektai, #kompanija, #auto-nuoma, #apsistojimas {
-        width: 95%; /* Use a percentage for flexibility */
-        max-width: 1450px; /* Keep a max width for very large screens */
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-/* Max-width: 1300px - Large screen adjustments */
-@media (max-width: 1300px) {
-    #planavimas {
-        width: 90%; /* Scale down the main form container */
-    }
-    /* Allow form elements to take more width if space is limited, but keep max-width for sanity */
-    #planavimas input[type="date"],
-    #isvyk,
-    #atvyk {
-        max-width: 300px;
-    }
-    #zmoniu_sk {
-        max-width: 150px;
-    }
-    /* Hide the element symbols as they take up space */
-    #pyro_symbol, #cryo_symbol, #geo_symbol, .paimon {
-        display: none;
-    }
-    /* Adjust footer layout for better stacking if elements are wider */
-    footer section {
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        gap: 5%;
-    }
-    footer section > div {
-        flex-basis: 40%; /* Each column takes up less than half the space */
-    }
-}
-/* Max-width: 800px - Tablet/Mid-sized screen adjustments */
-@media (max-width: 800px) {
-    /* Header/Navigation adjustments */
-    header {
-        flex-direction: column; /* Stack logo and nav vertically */
-        padding: 10px 5%;
-    }
-    #pavadinimas {
-        margin-bottom: 10px;
-    }
-    header h1 {
-        font-size: 1.5em; /* Smaller main heading */
-        top: 15px;
-    }
-    nav ul {
-        gap: 15px; /* Tighter navigation links */
-        justify-content: center;
-        font-size: 1em;
-    }
-    
-    /* Main Content Heading */
-    #index h2, #pamatyti h2, #apie_mus h2, #paslaugos h2 {
-        font-size: 2em;
-        margin: 30px 10px 15px;
-    }
-    
-    /* Travel Planning Form */
-    #planavimas {
-        width: 95%;
-        margin: 0 auto 30px;
-    }
-    #planavimas form {
-        flex-direction: column; /* Stack form elements vertically */
-        gap: 10px;
-    }
-    #planavimas input[type="date"],
-    #isvyk,
-    #atvyk,
-    #zmoniu_sk {
-        width: 100%; /* Full width for form fields */
-        max-width: none; /* Remove max-width constraint */
-        padding: 15px 10px; /* Slightly smaller padding */
-    }
-    #planavimas input[type="submit"] {
-        width: 100%;
-        padding: 15px;
-    }
-    
-    /* Popular Destinations */
-    #vietos {
-        flex-direction: column; /* Stack destinations vertically */
-        align-items: center;
-    }
-    #vietos figure {
-        flex-basis: 90%; /* Almost full width */
-        max-width: 400px;
-    }
-    
-    /* Reviews */
-    #atsiliepimu_deze {
-        flex-direction: column; /* Stack reviews vertically */
-        align-items: center;
-        padding: 0 10px;
-    }
-    section div.atsiliepimai {
-        width: 90%;
-        max-width: 450px;
-        margin: 10px auto;
-    }
-    
-    /* FAQ Section */
-    #D-U-K details {
-        max-width: 95%;
-    }
-    #D-U-K summary {
-        padding: 10px;
-    }
-    .duk-ul li {
-        margin-left: 30px;
-    }
-    
-    /* Footer */
-    footer section {
-        flex-direction: column; /* Stack footer columns vertically */
-        align-items: center;
-        gap: 20px;
-    }
-    footer section > div {
-        flex-basis: 100%;
-        text-align: center;
-    }
-    footer ul {
-        padding: 0;
-    }
-    .paimon {
-        display: none; /* Hide large decorative mascot on mobile */
-    }
-    #social_media {
-        justify-content: center; /* Center social icons when footer stacks */
-        margin-top: 10px;
-    }
-    
-    /* Popup/Aside Adjustments */
-    .paimon_popup {
-        width: 120px; /* Smaller floating icon */
-    }
-    .popup {
-        /* Full-screen or large modal style */
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-    
-    /* Weather Widget Adjustments (from the fragment) */
-    #region_orai {
-        width: 95%;
-        margin: 15px auto;
-    }
-    .orai_rekomendacijos section {
-        grid-template-columns: 1fr; /* Stack weather recommendations vertically */
-        max-width: 90%;
-    }
-}
-/* Max-width: 768px - Dedicated tablet breakpoint/General small screen logic */
-@media (max-width: 768px) {
-    /* 1. General Layouts & Fixed Widths */
-    #vietu_aprasymai p {
-        width: auto; /* Remove fixed width */
-        margin-top: 20px;
-        padding: 0 15px 15px; /* Add padding for better readability */
-    }
-    
-    #loading_screen::before, #loading_screen::after {
-        margin: 0 10px; /* Reduce horizontal margin for the lines */
-    }
-    
-    /* 2. Multi-Column Layouts - Stack them vertically */
-    .region_showcase,
-    #main_aside_apiemus,
-    #kompanijos_info,
-    #projektas_1,
-    #projektas_2,
-    #projektas_3,
-    #apsistojimas_beh3,
-    #main_aside {
-        flex-direction: column;
-        gap: 30px; /* Adjust gap for vertical stacking */
-        margin: 30px 20px; /* Adjust margins */
-    }
-    
-    /* Center the stacked project content */
-    #projektas_1, #projektas_2, #projektas_3 {
-        align-items: center;
-        text-align: center;
-    }
-    
-    /* Adjust registration/cart forms */
-    #main_aside {
-        top: 0; /* REMOVE NEGATIVE TOP OFFSET on mobile */
-        padding: 0 10px;
-        gap: 0; /* Remove gap if not needed */
-    }
-    
-    #registracija1, #krepselis, #mokejimas {
-        width: 95%;
-        max-width: 600px;
-        margin: 20px auto;
-        top: 0; /* Ensure no residual absolute positioning issues */
-    }
-    
-    /* Make form inputs take up the full width of their container */
-    #vardas, #pavarde, #imone, #elpastas {
-        width: 100%;
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    }
-    .region_showcase_a::after {
-        display: none; /* Hide hover text labels on touch devices */
-    }
-    /* .region_showcase_a {
-        padding: 10px;
-    }
-     */
-    /* 4. Decorative Backgrounds - Hide for performance/simplicity */
-    #dots1, #dots2,
-    #weapon_bow, #weapon_polearm, #weapon_claymore,
-    #weapon_claymore_mavuika,
-    #dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2,
-    #anemo_symbol, #anemo_symbol_upsidedown,
-    #geo_symbol_ka_pamatyti, #geo_symbol_ka_pamatyti_upsidedown,
-    #electro_symbol, #electro_symbol_upsidedown,
-    #dendro_symbol, #dendro_symbol_upsidedown,
-    #hydro_symbol, #hydro_symbol_upsidedown,
-    #pyro_symbol_ka_pamatyti, #pyro_symbol_upsidedown,
-    #cryo_symbol_ka_pamatyti, #cryo_symbol_upsidedown {
-        display: none !important; /* Force hide all absolute background images */
-    }
-    
-    /* Special case for the absolutely positioned car image that breaks layout */
-    #pavezejimas_img {
-        position: static;
-        height: auto;
-        width: 90%;
-        margin: 20px auto;
-        display: block;
-    }
-    
-    #auto-nuoma p {
-        width: auto;
-        margin: 20px;
-        text-align: left;
-    }
-    
-    /* Career/Form adjustments */
-    #planavimas_karjera_be_submit {
-        flex-direction: column;
-    }
-    
-    #planavimas_karjera input[type="submit"] {
-        margin-left: 0;
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    #karjera_elpastas, #karjera_cv {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    /* Registration/Payment */
-    #registracija_header {
-        height: 200px; /* Shorter header on mobile */
-    }
-    /* Ensure auto-nuoma div can adjust height/content on stacking */
-    #auto-nuoma div {
-        height: auto;
-        padding-bottom: 20px; /* Ensure padding for content */
-    }
-}
-/* Max-width: 480px - Mobile/Smallest screen adjustments */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.3em;
-        top: 12px;
-        margin-left: -18px;
     }
     #logotipas {
         height: 50px;
@@ -2005,15 +1834,32 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         margin: 5px 0;
         text-align: center;
     }
-    
+    #komanda_visa {
+        max-height: 100%;
+        height: auto;
+    }
     /* Weather Widget Adjustments (from the fragment) */
     #region_orai {
         width: 95%;
         margin: 15px auto;
     }
+    .orai_rekomendacijos section div {
+    max-width: 150px;
+    }
     .orai_rekomendacijos section {
-        grid-template-columns: 1fr; /* Stack weather recommendations vertically */
-        max-width: 90%;
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto; 
+    }
+    #planavimas_karjera_be_submit {
+        margin: 10px 0 !important;
+        gap: 10px !important;
+    }
+    #planavimas_karjera {
+        gap: 5px !important;
+    }
+    .reklama_img {
+        display: none;
     }
 }
 /* -------------- @media -------------- */
