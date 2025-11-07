@@ -1346,6 +1346,10 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     }
 }
 @media (max-width: 1300px) {
+    header {
+        flex-direction: column;
+        padding: 10px 5%;
+    }
     #planavimas {
         width: 90%;
     }
@@ -1364,11 +1368,43 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         flex-wrap: nowrap;
         justify-content: space-around;
         gap: 5%;
+        text-align: center;
     }
     footer section > div {
         flex-basis: 40%;
     }
-    
+    #dots1, #dots2,
+    #weapon_bow, #weapon_polearm, #weapon_claymore,
+    #weapon_claymore_mavuika,
+    #dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2,
+    #anemo_symbol, #anemo_symbol_upsidedown,
+    #geo_symbol_ka_pamatyti, #geo_symbol_ka_pamatyti_upsidedown,
+    #electro_symbol, #electro_symbol_upsidedown,
+    #dendro_symbol, #dendro_symbol_upsidedown,
+    #hydro_symbol, #hydro_symbol_upsidedown,
+    #pyro_symbol_ka_pamatyti, #pyro_symbol_upsidedown,
+    #cryo_symbol_ka_pamatyti, #cryo_symbol_upsidedown {
+        display: none !important;
+    }
+    #pavezejimas_img {
+        position: static;
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    #projektas_1, #projektas_2, #projektas_3 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .projektu_img {
+        height: auto;
+        max-width: 100%;
+    }
+    #auto-nuoma div {
+
+    }
 }
 @media (max-width: 800px) {
     header {
@@ -1394,6 +1430,19 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         font-size: 2em;
         margin: 30px 10px 15px;
     }
+    #dots1, #dots2,
+    #weapon_bow, #weapon_polearm, #weapon_claymore,
+    #weapon_claymore_mavuika,
+    #dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2,
+    #anemo_symbol, #anemo_symbol_upsidedown,
+    #geo_symbol_ka_pamatyti, #geo_symbol_ka_pamatyti_upsidedown,
+    #electro_symbol, #electro_symbol_upsidedown,
+    #dendro_symbol, #dendro_symbol_upsidedown,
+    #hydro_symbol, #hydro_symbol_upsidedown,
+    #pyro_symbol_ka_pamatyti, #pyro_symbol_upsidedown,
+    #cryo_symbol_ka_pamatyti, #cryo_symbol_upsidedown {
+        display: none !important;
+    }
     #planavimas {
         width: 95%;
         margin: 0 auto 30px;
@@ -1414,13 +1463,9 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         width: 100%;
         padding: 15px;
     }
-    #vietos {
-        flex-direction: column;
-        align-items: center;
-    }
     #vietos figure {
-        flex-basis: 90%;
-        max-width: 400px;
+        width: 100%;
+        height: auto;
     }
     #atsiliepimu_deze {
         flex-direction: column; 
@@ -1508,10 +1553,6 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         flex-direction: column;
         align-items: center;
     }
-    #vietos figure {
-        flex-basis: 90%; 
-        max-width: 400px;
-    }
     #atsiliepimu_deze {
         flex-direction: column;
         align-items: center;
@@ -1568,6 +1609,142 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     .orai_rekomendacijos section {
         grid-template-columns: 1fr;
         max-width: 90%;
+    }
+    #pavezejimas_img {
+        position: static;
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    #komanda_visa {
+        max-height: 100%;
+        height: auto;
+    }
+    .popup header {
+        font-size: smaller;
+    }
+    .popup_body {
+        font-size: smaller;
+    }
+    .orai_savaites_img {
+        max-width: 40px;
+        height: auto;
+    }
+    #vietu_aprasymai p {
+        width: auto; /* Remove fixed width */
+        margin-top: 20px;
+        padding: 0 15px 15px;
+    }
+    #loading_screen::before, #loading_screen::after {
+        margin: 0 10px;
+    }
+    .region_showcase,
+    #main_aside_apiemus,
+    #kompanijos_info,
+    #projektas_1,
+    #projektas_2,
+    #projektas_3,
+    #apsistojimas_beh3,
+    #main_aside {
+        flex-direction: column;
+        gap: 30px;
+        margin: 20px 10px;
+    }
+    #projektas_1, #projektas_2, #projektas_3 {
+        align-items: center;
+        text-align: center;
+    }
+    #main_aside {
+        top: 0;
+        padding: 0 10px;
+        gap: 0;
+    }
+    #registracija1, #krepselis, #mokejimas {
+        width: 95%;
+        max-width: 600px;
+        margin: 20px auto;
+        top: 0;
+    }
+    #vardas, #pavarde, #imone, #elpastas {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    li a img.region_showcase_href {
+    height: auto;
+    width: 30px;
+    display: block;
+    }
+    div#region_showcase_nav {
+        position: fixed;
+        left: 3px;
+        top: auto;
+        padding: 0;
+        text-align: center;
+    }
+    div#region_showcase_nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .region_showcase_a::after {
+        display: none;
+    }
+    #dots1, #dots2,
+    #weapon_bow, #weapon_polearm, #weapon_claymore,
+    #weapon_claymore_mavuika,
+    #dendro_symbol_apsistojimas1, #dendro_symbol_apsistojimas2,
+    #anemo_symbol, #anemo_symbol_upsidedown,
+    #geo_symbol_ka_pamatyti, #geo_symbol_ka_pamatyti_upsidedown,
+    #electro_symbol, #electro_symbol_upsidedown,
+    #dendro_symbol, #dendro_symbol_upsidedown,
+    #hydro_symbol, #hydro_symbol_upsidedown,
+    #pyro_symbol_ka_pamatyti, #pyro_symbol_upsidedown,
+    #cryo_symbol_ka_pamatyti, #cryo_symbol_upsidedown {
+        display: none !important;
+    }
+    #pamatyti section {
+        padding: 0;
+    }
+    #pavezejimas_img {
+        position: static;
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+        display: block;
+    }
+    #auto-nuoma p {
+        width: auto;
+        margin: 20px;
+        text-align: left;
+    }
+    #auto-nuoma {
+        padding: 0;
+    }
+    #planavimas_karjera_be_submit {
+        flex-direction: column;
+    }
+    #planavimas_karjera input[type="submit"] {
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    #karjera_elpastas, #karjera_cv {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #registracija_header {
+        height: 200px;
+    }
+    #auto-nuoma div {
+        height: auto;
+        padding-bottom: 20px;
+    }
+    #apsistojimas_beh3 details {
+        height: 100%;
+    }
+    figcaption {
+        padding: 10px 5px;
     }
 }
 @media (max-width: 768px) {
@@ -1689,6 +1866,17 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     #auto-nuoma div {
         height: auto;
         padding-bottom: 20px;
+    }
+    #apsistojimas_beh3 details {
+        height: 100%;
+    }
+    .orai_rekomendacijos section {
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: auto auto; 
+    }
+    figcaption {
+        padding: 10px 5px;
     }
 }
 @media (max-width: 480px) {
