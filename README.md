@@ -1,1 +1,1 @@
-# ziniatinknlis 2025
+# ziniatinklis 2025
