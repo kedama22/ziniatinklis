@@ -10,15 +10,15 @@ html {
 }
 body {
     background-color: #f4f7f6;
-    line-height: 1.6;
+    /* line-height: 1.6; */
 }
 @font-face {
     font-family: 'genshin_didelis';
-    src: url('images_fonts/Genshin_Impact_DRIP_FONT.ttf');
+    src: url('../images_fonts/Genshin_Impact_DRIP_FONT.ttf');
 }
 @font-face {
     font-family: 'genshin_paprastas';
-    src: url('images_fonts/genshin_impact_paprastas.ttf');
+    src: url('../images_fonts/genshin_impact_paprastas.ttf');
 }
 /* ------------------ POP-UP ------------------- */
 .paimon_icon {
@@ -303,24 +303,29 @@ header {
     align-items: center;
 }
 header h1 {
-    font-family: genshin_didelis;
+    font-family: genshin_didelis !important;
+    font-weight: 700;
     font-size: 2em;
     position: relative;
     top: 20px;
     margin-left: -23px;
 }
 #uzsakymas {
-    background: url('images_fonts/bandom.png') no-repeat center center/cover;
+    background: url('../images_fonts/bandom.png') no-repeat center center/cover;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 #index h2, #pamatyti h2, #apie_mus h2, #paslaugos h2 {
+    font-weight: 700;
     font-size: 3em;
     color: white;
     text-shadow: 2px 2px 4px #1e1e1e;
     margin: 50px 50px 20px 50px;
+}
+#index h3 {
+    font-weight: 700;
 }
 #planavimas {
     width: 1300px;
@@ -372,6 +377,7 @@ header h1 {
     background-color: #e0b33b;
 }
 #pyro_symbol {
+    top: ;
     z-index: -1;
     opacity: 4%;
     height: 600px;
@@ -438,6 +444,7 @@ nav ul {
     display: flex;
     font-size: 1.1em;
     gap: 25px;
+    margin-bottom: 0;
 }
 
 section {
@@ -1341,7 +1348,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     color: #8b3d5c;
 }
 /* -------------- @media -------------- */
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
     div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div#nod-krai,
     #projektai, #kompanija, #auto-nuoma, #apsistojimas {
         width: 95%;
@@ -1634,7 +1641,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         height: auto;
     }
     #vietu_aprasymai p {
-        width: auto; /* Remove fixed width */
+        width: auto;
         margin-top: 20px;
         padding: 0 15px 15px;
     }
@@ -1761,7 +1768,7 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
         height: auto;
     }
     #vietu_aprasymai p {
-        width: auto; /* Remove fixed width */
+        width: auto;
         margin-top: 20px;
         padding: 0 15px 15px;
     }
@@ -1989,5 +1996,5 @@ div#mondstadt, div#liyue, div#inazuma, div#sumeru, div#fontaine, div#natlan, div
     .reklama_img {
         display: none;
     }
-}
+} */
 /* -------------- @media -------------- */
